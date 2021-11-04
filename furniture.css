@@ -82,7 +82,7 @@ img {
 .latestContainer {
   background-color: white;
   width: 95vw;
-  height: 500px;
+  height: 450px;
   padding: 20px;
   /* border: 1px solid red; */
 }
@@ -100,4 +100,98 @@ img {
   padding-top: 20px;
   height: 90%;
   /* border: 2px solid teal; */
+}
+.collection_container {
+  width: 99%;
+  margin: auto;
+  height: 900px;
+  background-color: rgb(241, 241, 241);
+  /* border: 5px solid teal; */
+}
+#col {
+  color: brown;
+  font-weight: bolder;
+  font-size: 30px;
+  display: inline-block;
+  /* margin: 25px; */
+  /* border: 2px solid teal; */
+  box-sizing: border-box;
+  margin: 20px 0px 0px 20px;
+}
+.gridBox {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 400px 400px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+}
+.gridBox img {
+  width: 100%;
+  height: 90%;
+  /* border: 1px solid red; */
+}
+.gridBox span {
+  display: block;
+  text-align: center;
+  color: brown;
+  font-weight: bolder;
+
+  /* border: 2px solid teal; */
+  margin-top: 10px;
+}
+.gridBox div:nth-child(1) {
+  grid-area: box1;
+  /* background-color: brown; */
+}
+.gridBox div:nth-child(2) {
+  grid-area: box2;
+  /* background-color: cornflowerblue; */
+}
+.gridBox div:nth-child(3) {
+  grid-area: box3;
+  /* background-color: teal; */
+}
+.gridBox div:nth-child(4) {
+  grid-area: box4;
+  /* background-color: darkgoldenrod; */
+}
+.trending {
+  width: 98%;
+  height: 600px;
+  background-color: rgb(241, 241, 241);
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.trending h2{
+  color: brown;
+}
+.trendingImg {
+  display: flex;
+  justify-content: space-around;
+  height: 82%;
+}
+.trendingImg img {
+  width: 99%;
+  height: 80%;
+}
+.Tbox1 {
+  /* background-color: red; */
+  height: 95%;
+  width: 32%;
+}
+.Tbox2 {
+  height: 95%;
+
+  /* border: 2px solid teal; */
+  width: 32%;
+}
+.Tbox3 {
+  height: 95%;
+
+  /* border: 2px solid goldenrod; */
+  width: 32%;
 }
