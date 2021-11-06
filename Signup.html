@@ -20,6 +20,7 @@
 
    
    <div id ="h2">  Login Details
+      
     <hr> </div>
 
  <div class ="mainbox">
@@ -28,6 +29,7 @@
       
         <div id ="insideid1">
             <h2>Check out as a Guest</h2>
+          
             <!-- <p>Where should we email your receipt?</p> -->
             <h3>Where should we email your receipt?</h3>
             <br>
@@ -39,8 +41,8 @@
             <br>
             <input id = "email" type="email" placeholder="Enter your Email-Id" >
             <br>
-            <button id ="button"> 
-                <a href="checkout1.html" target="_self">Continue Securely</a>
+            <button id ="button"  onclick="showemail()"> 
+                <a href="checkout1.html" target="_self"  >Continue Securely</a>
             </button>
         </div>
      </div>
@@ -56,6 +58,7 @@
     <h2>Fabindia Account</h2>
     <br><br><br><br>
     <!-- <h4>Email Address:</h4> -->
+    <br>
     <label id ="email11">Email Address:</label>
     <br><br>
     <input id="email2" type="email" placeholder="Enter your Email - Id">
@@ -85,3 +88,9 @@
  </div>
 </body>
 </html>
+<script>
+    function showemail(){
+        var x =document.getElementById("dEmail").value;
+        console.log(x)
+    }
+</script>
