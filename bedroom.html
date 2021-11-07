@@ -5,7 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bed-Room</title>
-   <link rel="stylesheet" href="css files/bedroom.css">
+    <link rel="stylesheet" href="css files/bedroom.css" />
+    <style>
+      #product_container {
+        display: grid;
+        height: auto;
+
+        width: 100%;
+        grid-gap: 20px;
+
+        grid-template-columns: repeat(3, 30%);
+
+        justify-content: space-around;
+      }
+      #product_container > div {
+        border-radius: 5px;
+        border: 1px solid teal;
+      }
+      #product_container h3 {
+       display: block;
+       margin: 0px;
+       /* border: 1px solid tomato; */
+       text-align: center;
+       
+      }
+      #product_container h4 {
+        display: inline-block;
+       margin: 0px;
+       /* border: 1px solid tomato; */
+       text-align: center;
+       padding-top: 10px;
+       width: 50%;
+       margin-right: 20px;
+      
+      }
+      img {
+        width: 100%;
+        height: 85%;
+        /* border: 1px solid red; */
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -59,13 +98,15 @@
           <div>
             Sort By:
             <select name="" id="sortingBox">
-              <option value="">New to Old</option>
-              <option value="">High to Low</option>
-              <option value="">Low to High</option>
+              <option value="newtoold">New to Old</option>
+              <option value="hightolow">High to Low</option>
+              <option value="lowtohigh">Low to High</option>
             </select>
           </div>
         </div>
+        <div id="product_container"></div>
       </div>
     </div>
   </body>
 </html>
+<script src="JS/bedroom.js"></script>

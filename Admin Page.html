@@ -14,117 +14,120 @@
         <div>Bedroom Section</div>
         <br />
 
-        <form action="">
+        <form id="bedroom_form">
           <label for="">Choose Category</label>
-          <select name="" id="">
+          <select id="bedroom_select">
             <option value="">Select</option>
-            <option value="">Beds</option>
-            <option value="">Cabinets</option>
-            <option value="">Chairs</option>
-            <option value="">Tables</option>
+            <option value="beds">Beds</option>
+            <option value="cabinets">Cabinets</option>
+            <option value="chairs">Chairs</option>
+            <option value="tables">Tables</option>
           </select>
           <br />
           <label for="">SKU</label>
 
-          <input type="number" />
+          <input id="b_sku" type="text" />
           <br />
           <label for="">Product Name</label>
-          <input type="text" />
+          <input id="b_p_name" type="text" />
           <br />
           <label for="">Price</label>
-          <input type="number" />
+          <input id="b_price" type="number" />
           <br />
           <label for="">Color</label>
-          <input type="number" placeholder="hex-value" />
+          <input id="b_color" type="text" placeholder="hex-value" />
           <br />
           <label for="">Image URl</label>
 
-          <input type="text" />
+          <input id="b_url" type="text" />
           <br />
           <label for="">Size</label>
-          <input type="text" />
+          <input id="b_size" type="text" />
           <br />
           <label for="">Other Details</label>
-          <input type="text" />
+          <input id="b_other_detail" type="text" />
           <input id="submitBedroom" type="submit" />
         </form>
       </div>
       <div class="livingSection">
         <div>Living Section</div>
         <br />
-        <form action="">
+        <form id="living_form">
           <label for="">Choose Category</label>
-          <select name="" id="">
+          <select name="" id="living_select">
             <option value="">Select</option>
-            <option value="">Sofa</option>
-            <option value="">Consoles</option>
-            <option value="">Entertainment</option>
-            <option value="">Stools</option>
+            <option value="sofa">Sofa</option>
+            <option value="consoles">Consoles</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="stools">Stools</option>
           </select>
           <br />
           <label for="">SKU</label>
 
-          <input type="number" />
+          <input id="l_sku" type="text" />
           <br />
           <label for="">Product Name</label>
-          <input type="text" />
+          <input id="l_p_name" type="text" />
           <br />
           <label for="">Price</label>
-          <input type="number" />
+          <input id="l_price" type="number" />
           <br />
           <label for="">Color</label>
-          <input type="number" placeholder="hex-value" />
+          <input id="l_color" type="text" placeholder="hex-value" />
           <br />
           <label for="">Image URl</label>
 
-          <input type="text" />
+          <input id="l_url" type="text" />
           <br />
           <label for="">Size</label>
-          <input type="text" />
+          <input id="l_size" type="text" />
           <br />
           <label for="">Other Details</label>
-          <input type="text" />
-          <input id="submitBedroom" type="submit" />
+          <input id="l_other_detail" type="text" />
+          <input id="submitLiving" type="submit" />
         </form>
       </div>
       <div class="studySection">
         <div>Study Section</div>
         <br />
-        <form action="">
-          <label for="">Choose Category</label>
-          <select name="" id="">
-            <option value="">Select</option>
-            <option value="">Racks</option>
-            <option value="">Chairs</option>
 
-            <option value="">Tables</option>
+        <!-- Study Section -->
+        <form id="study_form">
+          <label for="">Choose Category</label>
+          <select name="" id="study_select">
+            <option value="">Select</option>
+            <option value="racks">Racks</option>
+            <option value="chairs">Chairs</option>
+
+            <option value="tables">Tables</option>
           </select>
           <br />
           <label for="">SKU</label>
 
-          <input type="number" />
+          <input id="s_sku" type="text" />
           <br />
           <label for="">Product Name</label>
-          <input type="text" />
+          <input id="s_p_name" type="text" />
           <br />
           <label for="">Price</label>
-          <input type="number" />
+          <input id="s_price" type="number" />
           <br />
           <label for="">Color</label>
-          <input type="number" placeholder="hex-value" />
+          <input id="s_color" type="text" placeholder="hex-value" />
           <br />
           <label for="">Image URl</label>
 
-          <input type="text" />
+          <input id="s_url" type="text" />
           <br />
           <label for="">Size</label>
-          <input type="text" />
+          <input id="s_size" type="text" />
           <br />
           <label for="">Other Details</label>
-          <input type="text" />
-          <input id="submitBedroom" type="submit" />
+          <input id="s_other_detail" type="text" />
+          <input id="submitStudy" type="submit" />
         </form>
       </div>
     </div>
   </body>
 </html>
+<script src="JS/admin.js"></script>
