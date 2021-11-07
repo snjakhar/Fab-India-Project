@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+    color: grey;
+}
+.first {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.container {
+  width: 98%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container > div {
+  width: 30%;
+  height: auto;
+  border: 2px solid rgb(170, 79, 79);
+  border-radius: 5px;
+  padding: 10px;
+}
+.bedroomSection > div:nth-child(1),
+.livingSection > div:nth-child(1),
+.studySection > div:nth-child(1) {
+  text-align: center;
+  font-size: 25px;
+  color: brown;
+  font-weight: bolder;
+}
+label,
+input,
+select {
+  display: inline-block;
+  width: 170px;
+  /* border: 2px solid brown; */
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+#submitBedroom {
+  background-color: grey;
+  margin-left: 20%;
+  border-radius: 20px;
+}
