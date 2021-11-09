@@ -1,8 +1,32 @@
-var cartButton=document.getElementById("cartButton");
-var items=0;
-var bedroom_data_array = JSON.parse(localStorage.getItem("bedroom_section"));
-display(bedroom_data_array);
-function display(array) {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Cart Page</h1>
+    <h2>Total Price is</h2>
+    <h3 id="priceBox"></h3>
+    <div id="product_container"></div>
+  </body>
+</html>
+<script>
+  var cartItem = JSON.parse(localStorage.getItem("cartItem"));
+  var bedroom_data_array = JSON.parse(localStorage.getItem("bedroom_section"));
+  var total = 0;
+  var newArray=[];
+  for (var i = 0; i < cartItem.length; i++) {
+    for (var j = 0; j < bedroom_data_array.length; j++) {
+      if (cartItem[i] == bedroom_data_array[j].sku) {
+        newArray.push(bedroom_data_array[j])
+      }
+    }
+  }
+  display(newArray)
+  function display(array) {
   var pc = document.getElementById("product_container");
   pc.innerHTML = "";
   array.map(function (item) {
@@ -32,23 +56,5 @@ function display(array) {
   });
 }
 
-var sorting = document.getElementById("sortingBox");
-sorting.addEventListener("change", sort_by_price);
-function sort_by_price(e) {
-  var arr = [];
-  if (e.target.value == "hightolow") {
-    arr = bedroom_data_array.sort(function (a, b) {
-      return b.price - a.price;
-    });
-  } else if (e.target.value == "lowtohigh") {
-    arr = bedroom_data_array.sort(function (a, b) {
-      return a.price - b.price;
-    });
-  } else {
-  }
-  display(arr);
-}
-
-cartButton.addEventListener("click",function(){
-  window.location.href="cart.html"
-})
+  
+</script>

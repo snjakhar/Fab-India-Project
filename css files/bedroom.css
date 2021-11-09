@@ -69,3 +69,6 @@ a {
   padding-top: 10px;
 
 }
+#cartButton{
+  cursor: pointer;
+}
