@@ -27,7 +27,10 @@
       #product_container > div {
         border-radius: 5px;
         border: 1px solid teal;
+        cursor: pointer;
+        position: relative;
       }
+
       #product_container h3 {
         display: block;
         margin: 0px;
@@ -43,14 +46,115 @@
         width: 50%;
         margin-right: 20px;
       }
-      img {
+      /* #product_container > div > img  */
+      .image{
         width: 100%;
         height: 85%;
+        display: block;
+        opacity: 1;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
         /* border: 1px solid red; */
       }
+
+    
+
+      
+
+
+
+
+      .blackBox {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+      .modalBox {
+        width: 1000px;
+        height: 80vh;
+        background-color: whitesmoke;
+        z-index: 3;
+        left: 20%;
+        top: 18%;
+        position: fixed;
+        /* margin-left:-500px; */
+        /* margin-top: -10px; */
+        border-radius: 20px;
+        color: black;
+      }
+      .inside_modalBox_container {
+        display: flex;
+        height: 92%;
+        width: 100%;
+        border: 1px solid black;
+      }
+      .inside_modalBox_container >div:nth-child(1) {
+        flex-grow: 1;
+        border: 1px solid teal;
+        margin: 10px;
+      }
+      .inside_modalBox_container >div:nth-child(2) {
+        flex-grow: 3;
+
+        border: 1px solid red;
+        margin: 10px;
+      }
+      .inside_modalBox_container > div {
+        border: 2px solid teal;
+      }
+      #modelImageBox > img {
+        width: 100%;
+        height: 100%;
+      }
+      
+     
+    
+    
+    
     </style>
   </head>
-  <body>
+  <body onload="hideBox()">
+    <div onclick="hideBox()" class="blackBox"></div>
+    <div class="modalBox">
+      <button onclick="hideBox()" style="float: right">X</button>
+      <div class="inside_modalBox_container">
+        <div id="modelImageBox">
+
+        </div>
+        <div id="modelDetailBox">
+            <div class="pName"></div>
+            <div class="pSku"></div>
+            <div>Size</div>
+            <div class="pSize"></div>
+            <div class="pMrp"></div>
+            
+            <div>(Incl. of all taxes)</div>
+            
+               <button class="inc"><i class="fas fa-minus"></i></button>
+               <button id="show">1</button>
+               <button class="dec"><i class="fas fa-plus"></i></button>
+             
+            
+            <button class="addToCartBtn">Add To Cart</button>
+            
+
+            <div>Check Delivery Service Availability</div>
+            <input type="number"><button>Check</button>
+            <div>Details</div>
+            <div class="details">
+              <ul class="list">
+
+              </ul>
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="textBox">
         <div>Home/Furniture/Bedroom</div>
@@ -112,6 +216,8 @@
         <div id="product_container"></div>
       </div>
     </div>
+    
+  </div >
   </body>
 </html>
 <script src="JS/bedroom.js"></script>
