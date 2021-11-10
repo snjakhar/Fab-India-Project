@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BED ROOM</title>
+    <style>
+        /* #product_container{
+            display: grid;
+            height: auto;
+            width: 100%;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3,30%);
+            justify-content: space-around;
+        }
+        #product_container>div{
+            border-radius: 5px;
+            border: 1px solid teal;
+
+        }
+        #product_container h3{
+            display: block;
+            margin: 0px;
+
+        }
+        #product_container h4{
+            display: inline-block;
+            margin: 0px;
+            padding-top: 10px;
+            width: 50%;
+            margin-right: 20px;
+        }
+        img{
+            width: 100%;
+            height: 85%;
+
+        } */
+/* 
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto ;
+            gap: 10px;
+        }
+        #mydiv{
+            border: 1px solid grey;
+            width: 50%;
+            height: 300px;
+            text-align: center;
+        } */
+
+        .container{
+            display: grid;
+            grid-template-areas:
+            "a b";
+
+        }
+        .textbox{
+            grid-area: "a";
+        }
+        .productbox{
+            grid-area: "b";
+        }
+        .whitestrip{
+            border: 1px solid blue;
+            margin-bottom: 30px;
+            padding: 20px;
+            font-size: 20px;
+            margin-right: 60px;
+            margin-top: 40px;
+            background-color: whitesmoke;
+        }
+        #mydiv{
+            border: 1px solid green;
+            width: 200px;
+            height: 250px;
+            
+            
+        }
+        #product_container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="textBox">
+            <div>HOME/FURNITURE/BEDROOM</div>
+            <h4>CATEGORY</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <div>
+                <div>Chair</div>
+                <div>Recks</div>
+                <div>Tables</div>
+            </div>
+
+            <h4>PRICE</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+
+            <div class="pricerange">
+                <a href="#">$0-$10000
+                    
+                </a>
+                <br/>
+                <a href="#">$10000-$20000</a>
+                <br/>
+                <a href="#">$20000-$30000</a>
+                <br/>
+                <a href="#">$30000-$40000</a>
+                <br/>
+                <a href="#">$40000-$50000</a>
+                <br/>
+                <a href="#">$50000-$60000</a>
+                <br/>
+                <a href="#">$60000-$70000</a>
+                <br/>
+                <a href="#">$70000-$80000</a>
+                <br/>
+                <a href="#">$80000-$90000</a>
+                <br/>
+            </div>
+            <h4>Color</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <a href=""><span></span>BROWN</a>
+            <br/>
+            <a href=""><span style="background-color: blanchedalmond;"></span>Natural</a>
+            <br/>
+            <a href=""> <span style="background-color: blue;"></span>Blue</a>
+
+
+        </div>
+        <div class="productbox">
+            <div class="whitestrip">
+                <span>Furnitute</span><span style="margin-left: 28%;">View by</span> 
+                <span style="margin-left: 10%;"> sort by:
+                    <select onchange="letssort()" id="Sortingbox">
+                        <option value="">Select</option>
+                        <option value="high">High to low</option>
+                        <option value="low">Low to high</option>
+                    </select>
+
+                </span>
+               
+            </div>
+            <div id="product_container"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script >
+    var count1=Number(0)
+    var count2=Number(0)
+    var count3=Number(0)
+    var count4=Number(0)
+    var count5=Number(0)
+    var count6=Number(0)
+    var count7=Number(0)
+    var count8=Number(0)
+    var count9=Number(0)
+    var table=[
+        {
+            Mrp:Number(800),
+            Type:"Shoes",
+            Image_ul:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v4609201116143444575/products/10693454CH.f.171021.jpg&height=475&width=475"
+        },
+        {
+            Mrp:Number(200),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRALfbyGO_13X3Aa1_OVK-pc4re4cgXoNvpK79jkRJ5FinON-yYkcmbBHWiWLcQrBSaMYZUBX2XFw&usqp=CAc"
+        },
+        {
+            Mrp:Number(500),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:Number(2000),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:Number(4000),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:Number(5000),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:Number(60000),
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+    ]
+    var body=document.querySelector("body")
+
+    // var maindiv=document.createElement("div")
+    // maindiv.setAttribute("class","container")
+    var maindiv=document.getElementById("product_container")
+    // body.append(maindiv)
+
+    for(i=0;i<table.length;i++){
+        if(table[i].Mrp>0&&table[i].Mrp<10000){
+            count1++
+            
+            
+        }else if(table[i].Mrp>=10000&&table[i].Mrp<20000){
+            count2++
+            
+            
+            
+        }
+        else if(table[i].Mrp>=20000&&table[i].Mrp<30000){
+            count3++
+            
+            
+        }
+        else if(table[i].Mrp>=30000&&table[i].Mrp<40000){
+            count4++
+            
+            
+        }
+        else if(table[i].Mrp>=40000&&table[i].Mrp<50000){
+            count5++
+            
+             
+        }
+        else if(table[i].Mrp>=50000&&table[i].Mrp<60000){
+            count6++
+            
+             
+        }
+        else if(table[i].Mrp>=60000&&table[i].Mrp<70000){
+            count7++
+        }
+        else if(table[i].Mrp>=70000&&table[i].Mrp<80000){
+            count8++
+            
+            
+        }
+        else if(table[i].Mrp>=80000&&table[i].Mrp<90000){
+            count9++
+            
+            
+        }
+
+    }console.log(count1)
+    console.log(count2)
+    console.log(count3)
+    console.log(count4)
+    console.log(count5)
+    console.log(count6)
+    console.log(count7)
+    console.log(count8)
+    console.log(count9)
+    // 
+
+    function letssort(){
+        var selected=document.getElementById("Sortingbox").value;
+        if(selected=="low"){
+           table= table.sort(function(a,b){
+                return a.Mrp-b.Mrp
+            })
+        }else if(selected=="high"){
+           table= table.sort(function(a,b){
+                return b.Mrp-a.Mrp
+            })
+        }
+        console.log(table)
+        showproducts()
+    }
+
+    showproducts()
+
+    function showproducts(){
+        table.map(function(item){
+            var smalldiv=document.createElement("div")
+            smalldiv.setAttribute("id","mydiv")
+            var img=document.createElement("img")
+            img.setAttribute("src",item.Image_url)
+
+            var h1=document.createElement("h1")
+            h1.textContent=item.Type
+
+            var h2=document.createElement("h2")
+            h2.textContent=item.Mrp
+
+            smalldiv.append(img,h1,h2)
+            maindiv.append(smalldiv)
+
+        })
+    }
+</script>

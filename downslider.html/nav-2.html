@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: sans-serif;
+        }
+
+        .nav-bar{
+            width: 100%;
+            background: #2c3e50;
+            height: 75px;
+            padding: 10px 0;
+            box-sizing: border-box;
+            border-bottom: 1px solid #1a252f;
+        }
+
+        .nav-bar ul{
+            width: 780px;
+            height: 100%;
+            margin: 0 auto;
+            list-style: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .nav-bar ul li{
+            width: 120px;
+            float: left;
+            text-align: center;
+            padding: 15px 0;
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+
+
+        }
+
+        .nav-bar ul li:last-child{
+            margin-right: 0;
+        }
+        .nav-bar ul li:hover{
+            color: #18bc9c;
+        }
+        .nav-bar ul li:hover .mega-menu{
+            color: #fff;
+        }
+        .nav-bar ul li .mega-menu p:hover{
+            color: #18bc9c;
+        }
+
+        .header-banner{
+            background: #18bc9c;
+            width: 100%;
+            height: 350px;
+        }
+        .mega-menu{
+            position: absolute;
+            left: 0;
+            top: 65px;
+            width: 650px;
+            height: 250px;
+            background: #2c3e50;
+            transition: all 0.4s ease;
+            padding: 40px;
+            box-sizing: border-box;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .inner-mega-menu{
+            float: left;
+            width: 24%;
+            margin-right: 1%;
+        }
+        .nav-bar ul li:hover .mega-menu{
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <ul>
+                <li>Menu
+                    <div class="mega-menu">
+                        <div class="inner-mega-menu">
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                        </div>
+                        <div class="inner-mega-menu">
+                            <p>Mega-menu
+                                <p>Mega-menu</p>
+                                <p>Mega-menu</p>
+                                <p>Mega-menu</p>
+                            </p>
+                            <!-- <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p> -->
+                           
+                        </div>
+                        <div class="inner-mega-menu">
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                        </div>
+                        <div class="inner-mega-menu">
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                            <p>Mega-menu</p>
+                        </div>
+                    </div>
+                </li>
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+            </ul>
+        </nav>
+        <div class="header-banner"></div>
+    </div>
+</body>
+</html>

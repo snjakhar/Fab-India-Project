@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-style:'Open Sans',sans-serif;
+        }
+        .container nav{
+            width: 100%;
+            height: 75px;
+            background: cadetblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .container nav ul{
+            width: 65%;
+            height: 100%;
+            margin: 0 auto;
+            list-style: none;
+            transition: all 0.5s ease;
+        }
+
+        .container nav ul li{
+            width: 20%;
+            float: left;
+            text-align: center;
+            color: #eee;
+            padding: 24px 15px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .container .header{
+            background: url('https://media.springernature.com/w735h400/nature-cms/uploads/cms/pages/2913/top_item_image/2021-11-01_News_UK-COVID-cases_THUMB-6ca608e28b488ddbf82f23f4b0860572.jpg?as=webp') no-repeat center;
+            background-size: cover;
+            min-height: 500px;
+            margin-top: 75px;
+        }
+
+        .container nav ul li:hover{
+            color: #ea3b50;
+            box-shadow: inset 0 5px #ea3b50;
+        }
+
+        .container nav ul li ul.sub-nav{
+            position: fixed;
+            background: #444759;
+            width: 70%;
+            height: 470px;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.14),-1px 0px 1px rgba(0,0,0,0.14);
+            top: 75px;
+            right: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .container nav ul li ul.sub-nav li{
+            color: #eee;
+            font-size: 14px;
+            width: 100%;
+            padding: 15px 0;
+        }
+
+        .container nav ul li ul.sub-nav li:hover{
+            color: #ea3b50;
+            box-shadow: 0 0;
+        }
+        .container nav ul li:hover ul.sub-nav{
+            visibility: visible;
+            opacity: 1;
+        }
+        .container nav ul li ul.sub-nav ul.subb-nav li{
+            font-size: 13px;
+           
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>Menu</li>
+                <li>Menu
+                    <ul class="sub-nav">
+                        <li>sub-menu
+                            <ul class="subb-nav">
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                
+                            </ul>
+                        </li>
+                        <li>sub menu
+                            <ul class="subb-nav">
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                
+                            </ul>
+                        </li>
+                        <li>sub menu
+                            <ul class="subb-nav">
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                <li>BED</li>
+                                <li>TABLE</li>
+                                
+                            </ul>
+                        </li>
+                        <li>sub menu</li>
+                        <li>sub menu</li>
+                    </ul>
+                </li>
+                <li>Menu
+                    <ul class="sub-nav">
+                        <li>sub-menu</li>
+                        <li>sub menu</li>
+                        <li>sub menu</li>
+                        <li>sub menu</li>
+                        <li>sub menu</li>
+                    </ul>
+                </li>
+                <li>Menu</li>
+            </ul>
+        </nav>
+        <div class="header"></div>
+    </div>
+</body>
+</html>

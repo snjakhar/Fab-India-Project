@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+        }
+        #mydiv{
+            border: 1px solid grey;
+            width: 100%;
+            height: 300px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
+
+<script >
+
+    var table=[
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRALfbyGO_13X3Aa1_OVK-pc4re4cgXoNvpK79jkRJ5FinON-yYkcmbBHWiWLcQrBSaMYZUBX2XFw&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+        {
+            Mrp:"$699",
+            Type:"Shoes",
+            Image_ul:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaSCjVk6hoGEvH1njatSPb7M16pEAIFS8iNOQh-ocu196oLmLWazOYCN_ZKk5CtvUvpWs7ldL4gA&usqp=CAc"
+        },
+    ]
+    var body=document.querySelector("body")
+
+    var maindiv=document.createElement("div")
+    maindiv.setAttribute("class","container")
+    body.append(maindiv)
+
+    showproducts()
+
+    function showproducts(){
+        table.map(function(item){
+            var smalldiv=document.createElement("div")
+            smalldiv.setAttribute("id","mydiv")
+            var img=document.createElement("img")
+            img.setAttribute("src",item.Image_url)
+
+            var h1=document.createElement("h1")
+            h1.textContent=item.Type
+
+            var h2=document.createElement("h2")
+            h2.textContent=item.Mrp
+
+            smalldiv.append(img,h1,h2)
+            maindiv.append(smalldiv)
+
+        })
+    }
+</script>
