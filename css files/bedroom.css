@@ -36,6 +36,10 @@ body {
 }
 a {
   text-decoration: none;
+  color: rgb(173, 9, 9);
+  display: block;
+  line-height: 18px;
+  font-weight:500;
 }
 .pirceRangeBox {
   line-height: 25px;
@@ -54,13 +58,14 @@ a {
 }
 .whiteStrip div:nth-child(1) {
   flex-basis: 30%;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bolder;
+  color:rgb(121, 5, 5);
 }
-.whiteStrip :nth-child(2) {
-  /* color: red; */
-  flex-basis: 30%;
-  padding-top: 10px;
+
+.whiteStrip :nth-child(2) select{
+  border-radius: 10px;
+  background-color: gainsboro;
 }
 .whiteStrip :nth-child(3) {
   font-size: 15px;

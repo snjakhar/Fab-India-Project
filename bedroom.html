@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bed-Room</title>
+
     <link rel="stylesheet" href="css files/bedroom.css" />
     <link
       rel="stylesheet"
@@ -12,11 +13,28 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="css files/slick.css" />
+    <link rel="stylesheet" href="css files/slick-theme.css" />
+    <script src="JS/jquery-3.6.0.js"></script>
+   
+    
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
     <style>
-      *{
+      * {
         font-family: sans-serif;
-        
       }
+
       #product_container {
         display: grid;
         height: auto;
@@ -30,43 +48,53 @@
       }
       #product_container > div {
         border-radius: 5px;
-        border: 1px solid teal;
+        border: 1px solid grey;
         cursor: pointer;
         position: relative;
+        height: 400px;
       }
 
       #product_container h3 {
-        display: block;
-        margin: 0px;
-        /* border: 1px solid tomato; */
+        margin-top: 15px;
+
         text-align: center;
+        color: brown;
+        font-family: sans-serif;
       }
       #product_container h4 {
-        display: inline-block;
-        margin: 0px;
-        /* border: 1px solid tomato; */
+        line-height: 0px;
+
         text-align: center;
-        padding-top: 10px;
-        width: 50%;
-        margin-right: 20px;
+        color: rgba(36, 32, 32, 0.747);
+        font-family: sans-serif;
+        text-decoration: underline;
       }
       /* #product_container > div > img  */
-      .image{
+      .image {
         width: 100%;
-        height: 85%;
+        height: 75%;
         display: block;
         opacity: 1;
         transition: 0.5s ease;
         backface-visibility: hidden;
+        /* transition: transform 0.8s ease; */
+
         /* border: 1px solid red; */
       }
 
-    
+      #product_container > div {
+        /* height: 300px; */
+        overflow: hidden;
+        z-index: 1;
+      }
 
-      
+      /* [2] Transition property for smooth transformation of images */
 
-
-
+      /* [3] Finally, transforming the image when container gets hovered */
+      #product_container > div:hover img {
+        transform: scale(1.3);
+        height: 76%;
+      }
 
       .blackBox {
         width: 100%;
@@ -96,92 +124,137 @@
         width: 100%;
         /* border: 1px solid black; */
       }
-      .inside_modalBox_container >div:nth-child(1) {
+      .inside_modalBox_container > div:nth-child(1) {
         flex-grow: 1;
         /* border: 1px solid teal; */
         margin: 10px;
       }
-      .inside_modalBox_container >div:nth-child(2) {
+      .inside_modalBox_container > div:nth-child(2) {
         flex-grow: 3;
 
         /* border: 1px solid red; */
         margin: 10px;
       }
-      .inside_modalBox_container > div {
-        /* border: 2px solid teal; */
+
+      .pName {
+        font-size: 25px;
+        font-weight: bolder;
+        color: brown;
+        margin-bottom: 5px;
+        z-index: 2;
       }
-      #modelImageBox > img {
+
+      .btns > button {
+        font-size: 20px;
+        background-color: rgb(236, 204, 20);
+        border-radius: 5px;
+        border: 1px ridge grey;
+      }
+      #modelDetailBox > div {
+        padding-bottom: 10px;
+      }
+
+      td {
+        padding-left: 20px;
+      }
+      #pmrp {
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .delivery {
+        margin-top: 10px;
+        padding-bottom: 0px;
+      }
+      #check {
+        background-color: wheat;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      #modelImageBox {
+        width: 40%;
+        height: 90%;
+      }
+
+      /* [2] Transition property for smooth transformation of images */
+      /* #modelImageBox img {
+        transition: transform 0.5s ease;
+      } */
+
+      /* [3] Finally, transforming the image when container gets hovered */
+      /* #modelImageBox:hover img {
+        transform: scale(1.5);
+      } */
+
+      .img1,
+      .img2,
+      .img3 {
+        width: 90%;
+        height: 90%;
+      }
+      #modelImageBox img {
         width: 100%;
-        height: 100%;
+        height: 350px;
       }
-      
-     .pName{
-      font-size: 25px;
-      font-weight: bolder;
-      color: brown;
-      margin-bottom: 5px;
-     }
-     /* .pSku{
-      margin-bottom: 5px; 
-     }
-     .pSize{
-       margin-top: 5px;
-     }
-     .pMrp{
-       margin-top: 5px;
-       margin-bottom: 1px;
-     }
-     .taxes{
-      margin-bottom: 10px;
-     } */
-     #modelDetailBox button{
-       font-size: 20px;
-       background-color:rgb(236, 204, 20);
-       border-radius: 5px;
-     }
-     #modelDetailBox{
-       line-height: 30px;
-     }
-    
-    
-    
+      #cartButton{
+        color:goldenrod;
+        font-size: 30px;
+        margin: 0px;
+      }
+      .errormsg{
+        color:rgb(204, 17, 17);
+        margin-left: 40%;
+        font-size: 20px;
+        font-weight: bold;
+       
+      }
     </style>
   </head>
   <body onload="hideBox()">
     <div onclick="hideBox()" class="blackBox"></div>
     <div class="modalBox">
+      <span class="errormsg"></span>
       <button onclick="hideBox()" style="float: right">X</button>
       <div class="inside_modalBox_container">
-        <div id="modelImageBox">
-
+        <div class="slider" id="modelImageBox">
+          <div class="img1"></div>
+          <div class="img2"></div>
+          <div class="img3"></div>
         </div>
+
+        <!-- <div id="modelImageBox" class="fade">
+          <div class="img1">
+            <img src="Images/img10.jpg" alt="" />
+          </div>
+          <div class="img2">
+            <img src="Images/img11.jpg" alt="" />
+          </div>
+          <div class="img3">
+            <img src="Images/img12.jpg" alt="" />
+          </div>
+        </div> -->
         <div id="modelDetailBox">
-            <div class="pName"></div>
-            <div class="pSku"></div>
-            <div>Size</div>
-            <div class="pSize"></div>
-            <div class="pMrp"></div>
-            
-            <div class="taxes">(Incl. of all taxes)</div>
-            
-               <button class="inc"><i class="fas fa-minus"></i></button>
-               <button id="show">1</button>
-               <button class="dec"><i class="fas fa-plus"></i></button>
-             
-            
-            <button class="addToCartBtn">Add To Cart</button>
-            
+          <div class="pName"></div>
+          <div class="pSku"></div>
+          <div>Size</div>
+          <div class="pSize"></div>
+          <div style="padding-bottom: 0px" class="pMrp" id="pmrp"></div>
 
-            <div>Check Delivery Service Availability</div>
-            <input type="number"><button>Check</button>
-            <div>Details</div>
-            <div class="details">
-              <ul class="list">
+          <div class="taxes">(Incl. of all taxes)</div>
+          <div class="btns">
+            <button class="inc"><i class="fas fa-minus"></i></button>
+            <button id="show">1</button>
+            <button class="dec"><i class="fas fa-plus"></i></button>
+            <button id="addToCartBtn">Add To Cart</button>
+          </div>
 
-              </ul>
-            </div>
-            
+          <span class="delivery">Check Delivery Service Availability</span>
+          <input type="number" />
+          <button id="check">Check</button>
+          <div style="font-weight: bolder">Details:</div>
 
+          <table>
+            <tbody class="tableList"></tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -191,63 +264,74 @@
         <h4>Category</h4>
         <hr style="width: 25%; text-align: left; margin-left: 0" />
 
-        <a href="">Beds(9)</a>
+        <a href="javascript:onlyBeds()">Beds(9)</a>
         <br />
-        <a href="">Cabinets(10)</a>
+        <a href="javascript:onlyCabinets()">Cabinets(10)</a>
         <br />
-        <a href="">Chairs(1)</a>
+        <a href="javascript:onlyChairs()">Chairs(1)</a>
+
         <br />
-        <a href="">Tables(8)</a>
+
+        <a href="javascript:onlyTables()">Tables(10)</a>
+
         <br />
         <h4>-Price</h4>
         <hr style="width: 25%; text-align: left; margin-left: 0" />
         <div class="pirceRangeBox">
-          <a href=""> ₹0 - ₹10,000 (7)</a>
+          <a href="javascript:zerototen()"> ₹0 - ₹10,000 (7)</a>
           <br />
 
-          <a href="">₹10,000 - ₹20,000 (2)</a>
+          <a href="javascript:tentotwenty()">₹10,000 - ₹20,000 (2)</a>
           <br />
-          <a href="">₹20,000 - ₹30,000 (5)</a>
+          <a href="javascript:twentytothirty()">₹20,000 - ₹30,000 (3)</a>
           <br />
-          <a href="">₹30,000 - ₹40,000 (6)</a>
+          <a href="javascript:thirtytoforty()">₹30,000 - ₹40,000 (5)</a>
           <br />
-          <a href="">₹40,000 - ₹50,000 (2)</a>
+          <a href="javascript:fortytofifty()">₹40,000 - ₹50,000 (3)</a>
           <br />
-          <a href="">₹60,000 - ₹70,000 (3)</a>
-          <br />
-          <a href="">₹70,000 - ₹80,000 (2)</a>
-          <br />
-          <a href="">₹80,000 - ₹90,000 (1)</a>
+          <a href="javascript:abovefifty()">Above ₹50,000 (5)</a>
         </div>
         <h4>-Color</h4>
         <hr style="width: 25%; text-align: left; margin-left: 0" />
-        <a href=""><span></span> Brown</a>
+        <a href="javascript:onlyb()"><span></span> Brown</a>
         <br />
-        <a href="">
+        <a href="javascript:onlyn()">
           <span style="background-color: rgb(226, 212, 134)"></span>Natural</a
         >
         <br />
-        <a href=""> <span style="background-color: grey"></span>Grey</a>
+        <a href="javascript:onlyg()">
+          <span style="background-color: grey"></span>Grey</a
+        >
       </div>
       <div class="productBox">
         <div class="whiteStrip">
-          <div>Bedroom Furniture</div>
-          <div>View By:</div>
+          <div class="pageHeading">Bedroom Furniture</div>
+          
           <div>
             Sort By:
             <select name="" id="sortingBox">
-              <option value="newtoold">New to Old</option>
+              <option value="newtoold">Select</option>
               <option value="hightolow">High to Low</option>
               <option value="lowtohigh">Low to High</option>
             </select>
-            <i id="cartButton" class="fas fa-shopping-cart"></i>
+            <i id="cartButton" class="fas fa-shopping-cart">0</i>
+           
           </div>
         </div>
         <div id="product_container"></div>
       </div>
     </div>
-    
-  </div >
   </body>
 </html>
 <script src="JS/bedroom.js"></script>
+<script>
+  $(".slider").slick({
+    dots: true,
+    infinite: true,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+  });
+</script>
