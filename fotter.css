@@ -1,0 +1,131 @@
+.footcontainer{
+   
+    width: 100%;
+    height: 670px;
+    border: 1px solid;
+    background-image: url("https://www.colourbox.com/preview/6273218-vintage-floral-seamless-pattern-on-brown.jpg");
+    padding: 5px;
+}
+.footcontainer>h5{
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+.footcontainer>p{
+    margin-top: 5px;
+    color: rgb(214, 194, 183);
+    text-align: center;
+}
+#tablecontent{
+    display: grid;
+    border: 1px solid black;
+    width: 97%;
+    height: 550px;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 2px;
+    grid-template-areas:"a00 a11 a22 a33" "a44 a44 a44 a44";
+   
+}
+#tablecontent>div:nth-child(1){
+    grid-area: a00;
+    border-left: none;
+    width:100%;
+    height: 230px;
+}
+#tablecontent>div:nth-child(2){
+    grid: a11;
+    border-left: 1px solid darkgray;
+    width:100%;
+    height: 230px;
+    border-radius: 5px;
+}
+
+#tablecontent>div:nth-child(3){
+    grid-area: a22;
+    border-left: 1px solid darkgray;
+    width:100%;
+    height: 230px;
+    border-radius: 5px;
+}
+
+#tablecontent>div:nth-child(4){
+    grid-area: a33;
+    border-left: 1px solid darkgray;
+    width:100%;
+    height: 230px;
+    border-radius: 5px;
+}
+#tablecontent>div>ul{
+margin-top: 5px;
+    list-style-type: none;
+    line-height: 25px;
+    color: darkslategray;
+    font-size: 12px;
+}
+a {
+    text-decoration-line: none;
+    color: darkslategray;
+  }
+  #tablecontent>div>h4{
+    margin-top: 1px;
+}
+#tablecontent>div:nth-child(5){
+    grid-area: a44;
+    border-left: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+    width:100%;
+    height: 90px;
+    border-radius: 5px; 
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    gap: 10px;
+
+   
+}
+#tablecontent>div:nth-child(5)>div{
+border-right: 1px solid darkgray;
+width: 25%;
+
+color:rgb(72, 54, 10);
+font-weight: lighter;
+}
+
+
+.sociallogo>p{
+    margin-top: 2px;
+    text-align: left;
+}
+.sociallogo>div{
+    border: 1px solid transparent;
+    width: 15%;
+    height: 50%;
+   
+  
+   display: inline-flex;
+ 
+}
+.soclogo{
+    width: 50%;
+ 
+}
+
+
+.applogo{
+width: 170%;
+
+
+}
+.copyright{
+    background-color: antiquewhite;
+
+    text-align: center;
+    padding: 15px;
+    color: sienna;
+    font-size: 15px;
+    
+}
+
+
