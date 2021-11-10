@@ -119,9 +119,9 @@ function openBox(item) {
   modal.style.display = "block";
   document.getElementById("modelImageBox").innerHTML = `<img src=${item.url}>`;
   document.querySelector(".pName").innerHTML = item.name;
-  document.querySelector(".pSku").textContent = item.sku;
+  document.querySelector(".pSku").textContent = "SKU:"+item.sku;
   document.querySelector(".pSize").textContent = item.size;
-  document.querySelector(".pMrp").textContent = item.mrp;
+  document.querySelector(".pMrp").textContent = "M.R.P. ₹"+item.mrp;
 
   for (var i = 0; i < item.detail.length; i++) {
     var li = document.createElement("li");
@@ -136,7 +136,7 @@ function openBox(item) {
     }
     document.getElementById("show").textContent = ++coun;
     var price = item.mrp * coun;
-    document.querySelector(".pMrp").textContent = price;
+    document.querySelector(".pMrp").textContent = "M.R.P. ₹"+price;
   });
 
   document.querySelector(".inc").addEventListener("click", function () {
@@ -146,7 +146,7 @@ function openBox(item) {
 
     document.getElementById("show").textContent = --coun;
     var price = item.mrp * coun;
-    document.querySelector(".pMrp").textContent = price;
+    document.querySelector(".pMrp").textContent = "M.R.P. ₹"+price;
   });
 
   document.querySelector(".blackBox").style.display = "block";

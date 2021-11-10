@@ -13,6 +13,10 @@
       crossorigin="anonymous"
     />
     <style>
+      *{
+        font-family: sans-serif;
+        
+      }
       #product_container {
         display: grid;
         height: auto;
@@ -70,7 +74,7 @@
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.6);
         z-index: 2;
       }
       .modalBox {
@@ -90,28 +94,54 @@
         display: flex;
         height: 92%;
         width: 100%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .inside_modalBox_container >div:nth-child(1) {
         flex-grow: 1;
-        border: 1px solid teal;
+        /* border: 1px solid teal; */
         margin: 10px;
       }
       .inside_modalBox_container >div:nth-child(2) {
         flex-grow: 3;
 
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: 10px;
       }
       .inside_modalBox_container > div {
-        border: 2px solid teal;
+        /* border: 2px solid teal; */
       }
       #modelImageBox > img {
         width: 100%;
         height: 100%;
       }
       
-     
+     .pName{
+      font-size: 25px;
+      font-weight: bolder;
+      color: brown;
+      margin-bottom: 5px;
+     }
+     /* .pSku{
+      margin-bottom: 5px; 
+     }
+     .pSize{
+       margin-top: 5px;
+     }
+     .pMrp{
+       margin-top: 5px;
+       margin-bottom: 1px;
+     }
+     .taxes{
+      margin-bottom: 10px;
+     } */
+     #modelDetailBox button{
+       font-size: 20px;
+       background-color:rgb(236, 204, 20);
+       border-radius: 5px;
+     }
+     #modelDetailBox{
+       line-height: 30px;
+     }
     
     
     
@@ -132,7 +162,7 @@
             <div class="pSize"></div>
             <div class="pMrp"></div>
             
-            <div>(Incl. of all taxes)</div>
+            <div class="taxes">(Incl. of all taxes)</div>
             
                <button class="inc"><i class="fas fa-minus"></i></button>
                <button id="show">1</button>
