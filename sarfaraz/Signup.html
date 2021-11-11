@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up-page / page1</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/b5afc624e3.js" crossorigin="anonymous"></script>
+   
+</head>
+<body class ="body">
+   
+    <div class ="container">
+        <img id ="img" src="https://www.fabindia.com/file/general/fab_india_logo.png" alt="">
+        <div id= "item"> 
+            <img src="https://www.fabindia.com/file/general/call-answer_n.svg" alt="height:30px;">
+            +918010488888</div>
+    </div>
+
+   
+   <div id ="h2">  Login Details
+      
+    <hr> </div>
+
+ <div class ="mainbox">
+
+    <!-- main box or main container -->
+     <div id = "id1">
+         
+      <!-- main container is right now contaning 2 sub mainbox  name : "id1 and id2" -->
+        <div id ="insideid1">
+            <h2>Check out as a Guest</h2>
+          
+            
+            <h3>Where should we email your receipt?</h3>
+            <br>
+            <br>
+           
+            <!-- <h4>Email Address:</h4> -->
+            <label id = "email11" >Email Address:</label>
+            <br>
+            <br>
+            <input id = "email" type="email" placeholder="Enter your Email-Id" >
+            <br>
+            <button id ="buttonguestEmail" > 
+                <!-- <a href="checkout1.html" target="_self"  >Continue Securely</a> -->
+                Conitune Securely
+            </button>
+        </div>
+     </div>
+
+
+
+<!-- sub mainbox1 end above -->
+
+<div id  ="id2">
+        <!-- sub main box2 start name "id2" -->
+    <div  id ="insideid2">
+        <h2>Sign In to your</h2>
+         <h2>Fabindia Account</h2>
+         <br><br>
+         <!-- <h4>Email Address:</h4> -->
+         <br>
+        <label id ="guestemail">Email Address:</label>
+        <br><br>
+        <input id="RegisterUserEmail" type="email" placeholder="Enter your Email - Id">
+         <br><br>
+         <!-- <h4>Password:</h4> -->
+         <label id = "password">Password:</label>
+          <br><br>
+        <input id = "RegisterUserPassword" type="password" placeholder="Enter password">
+        <br>
+         <br>
+         <!-- sign in button -->
+        <button id = "singinButton"> Sign In </button>
+        <br><br>
+        <!-- join now button this button is used when the customer is absolute beginer or buying first time froimfab india -->
+       
+       
+        <div id ="joinnow">
+             New to fabindia
+             <br><br>
+             <button id ="joinbtn">  <a  href="join.html" target="_self">Join Now</a> </button> 
+ 
+        </div>
+
+    </div>
+ </div>
+
+ <!-- warning dont touch above code  -->
+   <!-- main subbox2 end above  -->
+
+   <div id ="shrinivas"> Write Product Sumarry here Shrivas</div>
+    
+ 
+     
+ </div>
+</body>
+</html>
+
+
+
+
+<script>
+   document.getElementById("buttonguestEmail").addEventListener("click", buttonguestEmail123);
+
+   var registeruserarray =JSON.parse(localStorage.getItem("userdatajoin")) || [];
+   // console.log(registeruserarray)
+
+
+   function buttonguestEmail123(e){
+       e.preventDefault();
+     //  console.log("here")
+
+     var buttonguestEmail = document.getElementById("email").value;
+     console.log("buttonguestEmail", buttonguestEmail);
+
+     if(buttonguestEmail==""){
+         alert("Please Fill Your Email Address")
+     }else{
+        window.location.href="checkout1.html"
+     }
+   
+   
+   var GuestEmailId ={
+    GuestEmailIdAddress:buttonguestEmail,
+   };
+
+   registeruserarray.push(GuestEmailId);
+    localStorage.setItem("userdatajoin" ,JSON.stringify(registeruserarray));
+  
+}
+// the above js code is for guestemail id
+
+
+document.getElementById("singinButton").addEventListener("click",loginfn);
+
+function loginfn(e){
+    e.preventDefault();
+    console.log("hey i am working ");
+var RegisterUserEmail =document.getElementById("RegisterUserEmail").value;
+var RegisterUserPassword =  document.getElementById("RegisterUserPassword").value;
+
+console.log("RegisterUserEmail" , RegisterUserEmail , "RegisterUserPassword", RegisterUserPassword)
+
+if (RegisterUserPassword.length <3) {
+    return alert("Please enter correct password")
+}
+
+if(RegisterUserEmail =="admin" && RegisterUserPassword =="admin"){
+     alert("Welcome to Admin page");
+    window.location.href = "file:///C:/Users/ASUS_X510/Desktop/myfabindiacode/sriadmin.html"
+}
+else {
+console.log("not an admin")
+var flag = false;
+for(var i =0; i<registeruserarray.length; i++){
+    if(registeruserarray[i].Usercreatemail ==RegisterUserEmail && registeruserarray[i].userConfirmpassword ==RegisterUserPassword) {
+        alert("Sign in Successful");
+        window.location.href ="checkout1.html" 
+        flag = true;
+        break;
+
+    } 
+    // here is the problem the else part 
+ 
+
+
+
+    
+}
+
+if(flag==false){
+    alert("Please Enter Correct Credential !")
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+

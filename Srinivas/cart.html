@@ -88,21 +88,20 @@
         <span>Total Cart Amount :₹ </span>
         <span id="subtotal"></span>
         <hr />
-        
+
         <br />
         <br />
-        <button>Proceed to Checkout</button>
+        <button onclick="signup()">Proceed to Checkout</button>
       </div>
     </div>
   </body>
 </html>
 <script>
- var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
-var sub=document.getElementById("subtotal")
-var sum=carttotalprice(cartData);
-sub.textContent=sum;
+  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var sub = document.getElementById("subtotal");
+  var sum = carttotalprice(cartData);
+  sub.textContent = sum;
 
- 
   var sh = document.querySelector(".shoppinggrid");
   var len = cartData.length;
   sh.style = `grid-template-rows: repeat(${len}, 150px)`;
@@ -162,14 +161,12 @@ sub.textContent=sum;
         }
         counter++;
         var price = counter * item.mrp;
-       
+
         sp1.textContent = "Price: ₹" + price;
         b2.textContent = counter;
-        var sub=document.getElementById("subtotal");
-        var t=+(sub.textContent);
-        sub.textContent=t+item.mrp;
-
-
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t + item.mrp;
       });
       b3.addEventListener("click", function () {
         counter = +b2.textContent;
@@ -179,21 +176,24 @@ sub.textContent=sum;
         counter--;
         var price = counter * item.mrp;
         sp1.textContent = "Price: ₹" + price;
-        
+
         b2.textContent = counter;
 
-        var sub=document.getElementById("subtotal");
-        var t=+(sub.textContent);
-        sub.textContent=t-item.mrp;
-
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t - item.mrp;
       });
     });
   }
-  
+
   function carttotalprice(arr) {
     var total = arr.reduce(function (a, item) {
       return (a += item.mrp);
     }, 0);
     return total;
+  }
+
+  function signup() {
+    window.location.href = "/sarfaraz/Signup.html";
   }
 </script>
