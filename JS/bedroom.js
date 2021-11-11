@@ -1,3 +1,5 @@
+var whatdata;
+var second = document.getElementById("addToCartBtn");
 var tables = [
   {
     sku: "10676805TT",
@@ -508,12 +510,11 @@ var beds = [
   },
 ];
 
-
-
 display(beds);
 display(chair);
 display(cabinets);
 display(tables);
+
 function display(array) {
   array.map(function (item) {
     var pc = document.getElementById("product_container");
@@ -567,6 +568,9 @@ cartButton.addEventListener("click", function () {
 });
 
 function hideBox() {
+  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var len=cartData.length;
+  document.getElementById("cartButton").textContent=len;
   document.querySelector(".modalBox").style.display = "none";
   document.querySelector(".blackBox").style.display = "none";
   document.querySelector(".tableList").innerHTML = "";
@@ -574,7 +578,7 @@ function hideBox() {
 
 function openBox(item) {
   document.querySelector(".errormsg").textContent = "";
-
+  whatdata = item;
   var modal = document.querySelector(".modalBox");
   modal.style.display = "block";
   document.querySelector(".img1").innerHTML = `<img  src=${item.url1}>`;
@@ -598,25 +602,25 @@ function openBox(item) {
     document.querySelector(".tableList").append(tr);
   }
   var coun = 1;
-  document.querySelector(".dec").addEventListener("click", function () {
-    if (coun > 9) {
-      alert("Not more then 10 item allowed per user");
-      document.querySelector(".dec").removeEventListener();
-    }
-    document.getElementById("show").textContent = ++coun;
-    var price = item.mrp * coun;
-    document.querySelector(".pMrp").textContent = "M.R.P. ₹" + price;
-  });
+  // document.querySelector(".dec").addEventListener("click", function () {
+  //   if (coun > 9) {
+  //     alert("Not more then 10 item allowed per user");
+  //     document.querySelector(".dec").removeEventListener();
+  //   }
+  //   document.getElementById("show").textContent = ++coun;
+  //   var price = item.mrp * coun;
+  //   document.querySelector(".pMrp").textContent = "M.R.P. ₹" + price;
+  // });
 
-  document.querySelector(".inc").addEventListener("click", function () {
-    if (coun < 2) {
-      document.querySelector(".inc").removeEventListener();
-    }
+  // document.querySelector(".inc").addEventListener("click", function () {
+  //   if (coun < 2) {
+  //     document.querySelector(".inc").removeEventListener();
+  //   }
 
-    document.getElementById("show").textContent = --coun;
-    var price = item.mrp * coun;
-    document.querySelector(".pMrp").textContent = "M.R.P. ₹" + price;
-  });
+  //   document.getElementById("show").textContent = --coun;
+  //   var price = item.mrp * coun;
+  //   document.querySelector(".pMrp").textContent = "M.R.P. ₹" + price;
+  // });
 
   document.querySelector(".blackBox").style.display = "block";
 }
@@ -744,3 +748,17 @@ function onlyg() {
   pc.innerHTML = "";
   display(res);
 }
+
+var cartdata = JSON.parse(localStorage.getItem("cartItems")) || [];
+second.addEventListener("click", function () {
+  for (var i = 0; i < cartdata.length; i++) {
+    if (cartdata[i].sku == whatdata.sku) {
+      alert("Alreday In Cart");
+      return;
+    }
+  }
+
+  cartdata.push(whatdata);
+
+  localStorage.setItem("cartItems", JSON.stringify(cartdata));
+});

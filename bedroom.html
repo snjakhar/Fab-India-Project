@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="css files/slick.css" />
     <link rel="stylesheet" href="css files/slick-theme.css" />
     <script src="JS/jquery-3.6.0.js"></script>
-   
-    
 
     <link
       rel="stylesheet"
@@ -144,7 +142,7 @@
         z-index: 2;
       }
 
-      .btns > button {
+      .btns button:last-child {
         font-size: 20px;
         background-color: rgb(236, 204, 20);
         border-radius: 5px;
@@ -195,18 +193,18 @@
         width: 100%;
         height: 350px;
       }
-      #cartButton{
-        color:goldenrod;
+      #cartButton {
+        color: goldenrod;
         font-size: 30px;
         margin: 0px;
       }
-      .errormsg{
-        color:rgb(204, 17, 17);
+      .errormsg {
+        color: rgb(204, 17, 17);
         margin-left: 40%;
         font-size: 20px;
         font-weight: bold;
-       
       }
+      
     </style>
   </head>
   <body onload="hideBox()">
@@ -241,9 +239,9 @@
 
           <div class="taxes">(Incl. of all taxes)</div>
           <div class="btns">
-            <button class="inc"><i class="fas fa-minus"></i></button>
+            <!-- <button class="inc"><i class="fas fa-minus"></i></button>
             <button id="show">1</button>
-            <button class="dec"><i class="fas fa-plus"></i></button>
+            <button class="dec"><i class="fas fa-plus"></i></button> -->
             <button id="addToCartBtn">Add To Cart</button>
           </div>
 
@@ -306,7 +304,7 @@
       <div class="productBox">
         <div class="whiteStrip">
           <div class="pageHeading">Bedroom Furniture</div>
-          
+
           <div>
             Sort By:
             <select name="" id="sortingBox">
@@ -315,7 +313,6 @@
               <option value="lowtohigh">Low to High</option>
             </select>
             <i id="cartButton" class="fas fa-shopping-cart">0</i>
-           
           </div>
         </div>
         <div id="product_container"></div>
@@ -334,4 +331,7 @@
     autoplaySpeed: 1500,
     arrows: false,
   });
+  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var len=cartData.length;
+  document.getElementById("cartButton").textContent=len;
 </script>
