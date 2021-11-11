@@ -11,9 +11,11 @@
 
 
 }
-.img{
-    height: 50%;
-    width:40%;
+#img{
+  margin-top: 10px;
+  margin-left: 10px;
+    height: 85px;
+    width:250px;
 }
 #item{
     height: 20%;
