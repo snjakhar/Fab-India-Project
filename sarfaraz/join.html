@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join Now</title>
+    <link rel="stylesheet" href="joinnow.css">
+</head>
+
+<body class ="body">
+   
+    <div class ="container">
+      <a href="Home page.html"> <img id ="img" src="https://www.fabindia.com/file/general/fab_india_logo.png" alt=""></a>
+        <div id= "item"> 
+            <img  src="https://www.fabindia.com/file/general/call-answer_n.svg" alt="height:20px;">
+            +918010488888</div>
+    </div>
+
+   
+   <div class ="h2">  Login Details
+    <hr> </div>
+    
+   
+     <div id ="line1"></div>
+     </div>
+
+     <!-- creation of mainbox -->
+
+
+
+     <div id = "container1">
+         <div id = "box1">
+
+            <div id ="insideid1">
+                <h2>Check out as a Guest</h2>
+                <!-- <p>Where should we email your receipt?</p> -->
+                <h3 style="  color: #80021d;">Where should we email your receipt?</h3>
+                <br>
+                <br>
+               
+                <!-- <h4>Email Address:</h4> -->
+                <label id = "email11" >Email Address:</label>
+                <br>
+                <br>
+                <input id = "Gemail" type="email" placeholder="Enter your Email-Id" >
+                <br>
+                <button id ="button"> 
+                    <!-- <a href="checkout1.html" target="_self">Continue Securely</a> -->
+                    Continue Securely
+                </button>
+            </div>
+         </div>
+
+
+
+
+
+
+
+
+
+
+<!-- box2 right hand side -->
+
+
+         <div id ="box2">
+             <div id = "insideid2">
+                 <h2 id = "headingrighthandside2"> Create an Account</h2>
+                 <hr>
+                 <br><br><br>
+                 <label id ="labelEmail">Email Address:</label>
+                 <br>
+                 
+                 <input id ="createmail" type="email" name="" placeholder="Enter Email ">
+                 <br><br>
+                 <label >First Name:</label>
+                 <br>
+                 <input type="text" name="" id="firstname" placeholder="Enter Your First Name">
+                 <br><br>
+
+
+                 <label >Last Name:</label>
+                 <br>
+                 <input type="text" name="" id="lastname" placeholder="Enter Your Last Name">
+                 <br><br>
+
+                 <!-- mobile number code copied  -->
+                 <label >Phone Number:</label>
+                 <br>
+                 
+                 
+                 <select id ="select" name=""  >
+                     <option value="Country" selected disabled>Country</option>
+                     <option value="India">India</option>
+                     <option value="USA">USA</option>
+                     <option value="France">France</option>
+                     <option value="Germany">Germany</option>
+                     <option value="Itely">Itely</option>
+                     <option value="Russia">Russia</option>
+                     <option value="United Kingdom">United Kingdom</option>
+                     <option value="China">China</option>
+                     <option value="Saudi Arabia">Saudi Arabia</option>
+                     <option value="Dubia">Dubia</option>
+                     <option value="Qatar">Qatar</option>
+                     <option value="Argentina">Argentina</option>
+                     <option value="Australia">Australia</option>
+                     <option value="Canada">Canada </option>
+                     <option value="Greece">Greece</option>
+                 </select>
+                 <!-- above code is copied from my previous login in page -->
+<input type="number" name="" id="PhoneNumber" placeholder="Enter your Phone Number :">
+<br>
+<br>
+      <label class = "textlabel">Password:</label>
+      <br>
+      <input type="password" name="" id="createpassword" placeholder="Minimum 8 Character">
+      <br><br>
+
+
+      <label class = "textlabel">Confirm Password:</label>
+      <br>
+      <input type="password" name="" id="confirmpassword" placeholder="Re- Enter Your Password">
+      <br><br>
+      <button id ="registerbutton">Register</button>
+
+
+
+             </div>
+
+         </div>
+
+
+
+         <!-- main div close -->
+     </div>
+  
+</body>
+</html>
+<script>
+    document.getElementById("button").addEventListener("click", GuestEmailfun);
+    var registeruserarray =JSON.parse(localStorage.getItem("userdatajoin")) || [];
+
+    function GuestEmailfun(e){
+        e.preventDefault();
+        console.log("here")
+        var Gemail = document.getElementById("Gemail").value;
+        console.log("Gemail" , Gemail);
+        if(Gemail==""){
+         alert("Please Fill Your Email Address")
+         document.getElementById("Gemail").removeEventListenerr("click", GuestEmailfun);
+     }else if(Gemail !=""){
+       window.location.href="checkout1.html"
+     }
+
+
+
+
+
+        var GuestEmail = {
+            JoinGuestEmailAddress : Gemail,
+        }
+        registeruserarray.push(GuestEmail);
+    localStorage.setItem("userdatajoin" ,JSON.stringify(registeruserarray));
+    window.location.href="checkout1.html"
+
+    
+  
+}
+// above function is made for join as guest user 
+
+document.getElementById("registerbutton").addEventListener("click", resitrationFn);
+ function resitrationFn(e){
+     e.preventDefault();
+    var createmail =document.getElementById("createmail").value;
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    var select = document.getElementById("select").value;
+    var PhoneNumber = document.getElementById("PhoneNumber").value;
+    var createpassword = document.getElementById("createpassword").value;
+    var confirmpassword = document.getElementById("confirmpassword").value;
+    
+//    creating a object of credential
+
+var usercredntialJoinPage ={
+    Usercreatemail :createmail,
+    Userfirstname : firstname,
+    UserLastname:lastname,
+    UserSelectcountry :select,
+    UserPhoneNumber :PhoneNumber,
+    UserCreatepassword :createpassword,
+    userConfirmpassword :confirmpassword,
+};
+   
+registeruserarray.push(usercredntialJoinPage);
+localStorage.setItem("userdatajoin" ,JSON.stringify(registeruserarray));
+
+if(createmail=="" && firstname =="" && lastname=="" &&  PhoneNumber==""){
+    alert("Please Fill the Necessary Details");
+} else if  (confirmpassword.length < 8 && confirmpassword.length <8) {
+    alert("Enter strong password  minimum password length should be 8 ");
+}
+
+  else {
+     
+    window.location.href ="Signup.html";
+    alert("Your Account has been created")
+  }
+
+
+
+
+
+
+
+}
+
+
+
+
+    
+</script>
