@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        width: 100%;
+        height: auto;
+
+        background-color: rgb(244, 242, 229);
+        margin: auto;
+        display: flex;
+
+        gap: 20px;
+      }
+      .shoppingcart {
+        flex-grow: 4;
+        /* border: 3px solid teal; */
+        position: relative;
+      }
+      .summary {
+        flex-grow: 1.5;
+        /* border: 3px solid yellow; */
+        position: relative;
+      }
+
+      .shoppinggrid {
+        display: grid;
+        grid-template-columns: 20% 75%;
+        /* grid-template-rows: repeat(5, 100px); */
+        gap: 20px;
+      }
+      .shoppinggrid img {
+        width: 100%;
+        height: 100%;
+      }
+      .shoppinggrid > div {
+        /* border: 3px solid brown; */
+        background-color: rgb(249, 248, 241);
+      }
+      .shoppinggrid h2 {
+        margin: 0px;
+        color: brown;
+      }
+      .shoppinggrid span {
+        font-size: 22px;
+        line-height: 40px;
+      }
+      .removebtn {
+        border-radius: 10px;
+        background-color: salmon;
+      }
+
+      .inc,
+      .dec,
+      .show {
+        font-size: 20px;
+        border-radius: 5px;
+        background-color: goldenrod;
+        margin-left: 15px;
+      }
+      .qnty {
+        margin-left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shoppingcart">
+        <h2 style="margin-bottom: 5px">Your Shopping Cart</h2>
+        <hr />
+        <div class="shoppinggrid"></div>
+      </div>
+      <div class="summary">
+        <h2 style="margin-bottom: 5px">Order Summary</h2>
+
+        <hr />
+        <span>Total Cart Amount :₹ </span>
+        <span id="subtotal"></span>
+        <hr />
+        
+        <br />
+        <br />
+        <button>Proceed to Checkout</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+ var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+var sub=document.getElementById("subtotal")
+var sum=carttotalprice(cartData);
+sub.textContent=sum;
+
+ 
+  var sh = document.querySelector(".shoppinggrid");
+  var len = cartData.length;
+  sh.style = `grid-template-rows: repeat(${len}, 150px)`;
+  display(cartData);
+  function display(arr) {
+    sh.innerHTML = "";
+    arr.map(function (item) {
+      var div2 = document.createElement("div");
+      var head = document.createElement("h2");
+      head.textContent = item.name;
+      var sp1 = document.createElement("span");
+      sp1.textContent = "Price: ₹" + item.mrp;
+      var br1 = document.createElement("br");
+      var sp2 = document.createElement("span");
+      sp2.textContent = item.size;
+      var sp3 = document.createElement("span");
+      sp3.setAttribute("class", "qnty");
+      sp3.textContent = "Quantity";
+
+      var b1 = document.createElement("button");
+      b1.setAttribute("class", "inc");
+      b1.textContent = "+";
+      var b2 = document.createElement("button");
+      b2.setAttribute("class", "show");
+      b2.textContent = "1";
+      var b3 = document.createElement("button");
+      b3.setAttribute("class", "inc");
+      b3.textContent = "-";
+      var br = document.createElement("br");
+      div2.append(head, sp1, br1, sp2, sp3, b1, b2, b3, br);
+
+      var div1 = document.createElement("div");
+      div1.innerHTML = `<img src=${item.url1}>`;
+
+      sh.append(div1);
+      sh.append(div2);
+      var btn = document.createElement("button");
+      btn.setAttribute("class", "removebtn");
+      btn.textContent = "Remove Item";
+      div2.append(btn);
+
+      btn.addEventListener("click", function () {
+        for (var i = 0; i < cartData.length; i++) {
+          if (cartData[i] == item) {
+            cartData.splice(i, 1);
+          }
+        }
+        localStorage.setItem("cartItems", JSON.stringify(cartData));
+
+        display(cartData);
+      });
+      var counter = 1;
+      b1.addEventListener("click", function () {
+        if (counter > 4) {
+          alert("Maximum 5 Quantity Allowed Per Item");
+          return;
+        }
+        counter++;
+        var price = counter * item.mrp;
+       
+        sp1.textContent = "Price: ₹" + price;
+        b2.textContent = counter;
+        var sub=document.getElementById("subtotal");
+        var t=+(sub.textContent);
+        sub.textContent=t+item.mrp;
+
+
+      });
+      b3.addEventListener("click", function () {
+        counter = +b2.textContent;
+        if (counter < 2) {
+          return;
+        }
+        counter--;
+        var price = counter * item.mrp;
+        sp1.textContent = "Price: ₹" + price;
+        
+        b2.textContent = counter;
+
+        var sub=document.getElementById("subtotal");
+        var t=+(sub.textContent);
+        sub.textContent=t-item.mrp;
+
+      });
+    });
+  }
+  
+  function carttotalprice(arr) {
+    var total = arr.reduce(function (a, item) {
+      return (a += item.mrp);
+    }, 0);
+    return total;
+  }
+</script>
