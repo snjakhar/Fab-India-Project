@@ -1,0 +1,211 @@
+
+.body{
+    background-color: #f4f2e5;
+  }
+  .container{
+      border: 1px solid #aeb0b0;
+      height: 150px;
+      width: 100%;
+      background-color: #f4f2e5;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }
+  .img{
+      height: 50%;
+      width:40%;
+  }
+  #item{
+      height: 20%;
+      width: 100%;
+      font-size: 19px;
+    
+      text-align: right;
+      font-weight: bold;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     
+  }
+  #item>img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  .h2{
+    background-color: #f4f2e5;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+  }
+  #container1{
+    border: 1px solid #aeb0b0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+   
+    height: 900px;
+    width: 1000px;
+    margin-left: 20px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  }
+
+/* box1 has name "id1" box two name is "box2" */
+#insideid1{
+    background-color:  #f9f8f1;
+    
+    height: 400px;
+    width: 400px;
+    padding:50px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+   /* margin-top: 100px;
+    margin: auto; */
+  }
+/* box2 right hand sid */
+
+
+
+
+
+
+
+
+#box2{
+ 
+  background-color:  #f9f8f1;
+  margin-top: 10px;
+  height: 750px;
+  width: 390px;
+  padding: 30px;
+  margin-top: 10px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+}
+#headingrighthandside2{
+    font-size: 20px;
+    text-align: center;
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#createmail{
+    background-color: #f4f2e5;
+
+height: 40px;
+width: 250px;
+font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#firstname{
+    background-color: #f4f2e5;
+
+height: 40px;
+width: 250px; 
+font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#lastname{
+    background-color: #f4f2e5;
+
+height: 40px;
+width: 250px; 
+font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#PhoneNumber{
+    background-color: #f4f2e5;
+   
+    height: 40px;
+    width: 250px; 
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#select{
+    height: 40px;
+    width: 40px;
+    background-color: #f4f2e5;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+  #box1{
+    background-color: #f9f8f1;
+    border: 1px solid #aeb0b0;
+    height: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 14px;
+    padding: 10px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  #button{
+    background-color:  #F1E5AC;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 264px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  
+  }
+  #button:hover{
+    background-color:#FFD700;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }
+  #Gemail{
+    background-color: #f4f2e5;
+   
+    height: 40px;
+    width: 250px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  
+  }
+  #createpassword{
+    background-color: #f4f2e5;
+ 
+    height: 40px;
+    width: 250px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #confirmpassword{
+
+    background-color: #f4f2e5;
+  
+    height: 40px;
+    width: 250px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #registerbutton{
+    background-color:  #F1E5AC;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 350px;
+    margin-left: 10px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  
+  }
+  #registerbutton:hover{
+    background-color:#FFD700;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }

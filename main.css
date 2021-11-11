@@ -7,6 +7,7 @@
       height: 150px;
       width: 100%;
       background-color: #f4f2e5;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   }
   .img{
@@ -30,11 +31,13 @@
   .mainbox{
     display: grid;
     background-color: #f4f2e5;
-    grid-template-columns: auto auto;
-    grid-template-rows: 95%  95%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 95%  95% 95%;
     height: 600px;
-    width: 1100px;
+    width: 1500px;
     grid-gap:20px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
   }
   #id1{
     background-color: #f9f8f1;
@@ -45,6 +48,7 @@
     margin-right: 10px;
     text-align: center;
     line-height: 14px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   
   }
@@ -57,24 +61,40 @@
     margin-right: 10px;
     text-align: center;
     line-height: 14px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   #h2{
     background-color: #f4f2e5;
     font-size: 30px;
     font-weight: bold;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
     
   }
   #insideid1{
     background-color:  #f9f8f1;
-    
-    height: 400px;
+   
+    height: 350px;
     width: 400px;
     padding:50px;
    
    margin-top: 100px;
     margin: auto;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #shrinivas{
+    background-color: #f9f8f1;
+    border: 1px solid #aeb0b0;
+    height: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 14px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
   }
   #button{
+    
     background-color:  #F1E5AC;
     padding: 6px;
     cursor: pointer;
@@ -84,6 +104,8 @@
     border: none;
     height: 40px;
     width: 250px;
+    text-decoration-line: none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   
   }
@@ -91,44 +113,138 @@
     background-color:#FFD700;
   
   }
-  #email{
+  #guestemail{
     background-color: #f4f2e5;
-    border: 1px solid red;
+   
     height: 40px;
     width: 250px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   
   }
+
+  /* below code is for guest box  */
+#buttonguestEmail{
+  background-color:  #F1E5AC;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 250px;
+  text-decoration-line: none;
+}
+#buttonguestEmail:hover{
+  background-color:#FFD700;
+
+}
+#email{
+  background-color: #f4f2e5;
+
+    
+  height: 40px;
+  width: 250px;
+  line-height: 14px;
+}
+
+
+/* above code is for guest box  */
+
+
+
   /* Sign in side box */
-  #email2{
+  #RegisterUserPassword{
     background-color: #f4f2e5;
-    border: 1px solid red;
+    
     height: 40px;
     width: 250px;
     line-height: 14px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   }
-  #pass{
+  #RegisterUserEmail{
     background-color: #f4f2e5;
-    border: 1px solid red;
+    
     height: 40px;
     width: 250px;
     line-height: 14px;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
   }
-  #button2{
+#singinButton{
+  background-color:  #F1E5AC;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+  border: none;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#singinButton:hover{
+  background-color:#FFD700;
+
+
+} */
+
+
+
+
+
+
+  /* #button2{
     background-color:  #F1E5AC;
     padding: 6px;
     cursor: pointer;
     font-size: 17px;
-    margin-top: 10px;
+    cursor: pointer;
     border-radius: 5px;
     border: none;
-    height: 40px;
-    width: 250px;
+   
   
   }
   #button2:hover{
     background-color:#FFD700;
   
+  } */
+  #joinnow{
+    height: 40px;
+    width: 250px;
+  
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #joinbtn{
+    
+    background-color:  #F1E5AC;
+    padding: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+   
+  }
+  #joinbtn:hover{
+    background-color:#FFD700;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }
+  a{
+    text-decoration: none;
+    color:black;
+     font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
   }

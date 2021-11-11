@@ -1,0 +1,127 @@
+
+#body{
+    background-color: #f4f2e5;
+  }
+  .container{
+      border: 1px solid #aeb0b0;
+      height: 150px;
+      width: 100%;
+      background-color: #f4f2e5;
+  
+  }
+  .img{
+      height: 50%;
+      width:40%;
+  }
+  #item{
+      height: 20%;
+      width: 100%;
+      font-size: 19px;
+    
+      text-align: right;
+      font-weight: bold;
+     
+  }
+  #item>img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  .h2{
+    background-color: #f4f2e5;
+    font-size: 23px;
+    font-weight: bold;
+    
+  }
+  .line1{
+    width: 1000px;
+    height: 2px;
+}
+/* above css code are common for my every three page like sign up , signin page checin page join page and final payment checkout page */
+
+#container1{
+  border: 1px solid #aeb0b0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+ 
+  height: 800px;
+  width: 1000px;
+  margin-left: 20px;
+
+}
+#box1{
+  background-color:   #f9f8f1;
+  border: 1px solid #aeb0b0;
+
+  
+  height: 400px;
+  width: 250px;
+  padding:50px;
+ margin-top: 10px;
+ margin-left: 20px;
+ 
+}
+/* box2 right hand sid */
+
+#box2{
+  border: 1px solid #aeb0b0;
+background-color:  #f9f8f1;
+margin-top: 10px;
+height: 450px;
+width: 390px;
+padding: 20px;
+margin-top: 10px;
+
+
+}
+#paymentbutton{
+  background-color:  #F1E5AC;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 350px;
+
+
+}
+#paymentbutton:hover{
+  background-color:greenyellow;
+
+}
+
+.text1{
+ color: black;
+  text-decoration: none;
+
+}
+#cardnumber{
+  background-color: #f4f2e5;
+    
+  height: 40px;
+  width: 250px;
+  line-height: 14px;
+ 
+}
+#cardholdername{
+  background-color: #f4f2e5;
+    
+  height: 40px;
+  width: 250px;
+  line-height: 14px;
+}
+#monthselect{
+  background-color: #f4f2e5;
+  width: 70px;
+}
+#yearsselect{
+  background-color: #f4f2e5;
+  width: 70px;
+}
+#cvv1{
+  background-color: #f4f2e5;
+  width: 70px
+}

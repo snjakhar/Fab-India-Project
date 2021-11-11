@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fabindia/Checkout/payment.</title>
+    <link rel="stylesheet" href="C:\Users\ASUS_X510\Desktop\myfabindiacode\payment1..css">
+</head>
+
+
+<body id="body">
+   
+   
+    <div class ="container">
+        <img src="https://www.fabindia.com/file/general/fab_india_logo.png" alt="">
+        <div id= "item"> 
+            <img src="https://www.fabindia.com/file/general/call-answer_n.svg" alt="height:30px;">
+            +918010488888</div>
+    </div>
+
+   
+  
+  
+        <p class ="h2"> payment Details</p>
+        <hr>
+     </div>
+
+<!-- above  html code are common for my every three page like sign up , signin page checin page join page and final payment checkout page -->
+
+<div id="container1">
+    <!-- payment page has two main box   -->
+
+
+
+    <!-- box 1 -->
+    <div id = "box1">
+<h2>Make Payment </h2>
+
+<p ><a class = "text1" href="http://www.axisbank.com/">Credit card / Debit card</a></p>
+<p ><a class = "text1" href="http://www.axisbank.com/">Net Banking</a></p>
+<p><a  class = "text1" href="https://www.npci.org.in/what-we-do/upi/product-overview">UPI</a></p>
+<p ><a class = "text1" href="https://pay.google.com/">Google Pay</a></p>
+<p ><a class = "text1"  href="https://paytm.com/paytmwallet">Wallet</a></p>
+<p ><a class = "text1" href="https://www.w3schools.com/">Gift card</a></p>
+<p ><a class = "text1" href="https://www.w3schools.com/">Loyality point</a></p>
+<p ><a class = "text1" href="http://www.axisbank.com/"> E.M.I * </a></p>
+
+    </div>
+                                                       
+
+
+    <!-- box1 end  above  -->
+    <!-- box2 is below its a payment where user has to put card detials -->
+    <div id = "box2">
+        <form id = "form">
+        <H2>Enter Your Card Detials </H2>
+        <br>
+        <label >Card Number *</label>
+        <br>
+        <input type="number" name="" id="cardnumber" placeholder="Card Number">
+        <br><br><br>
+        <label > Name on Card *</label>
+        <br>
+        <input type="text" name="" id="cardholdername" placeholder="Card Holder-Name">
+        <br><br><br>
+        <label >Expires on *</label>
+        <br>
+        <select name="" id="monthselect">
+            <option value="Month" selected disabled>Month</option>
+            <option value="January">January</option>
+            <option value="Fabruary">Fabruary</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <select name="" id="yearsselect">
+            <option value="Year" selected disabled>Year</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
+            <option value="2036">2036</option>
+            <option value="2037">2037</option>
+            <option value="2038">2038</option>
+            <option value="2039">2039</option>
+            <option value="2040">2040</option>
+        </select>
+        <input type="number" name="" id="cvv1" placeholder="CVV">
+        <br><br><br>
+
+        <!-- <input  id = "submit" type="submit" placeholder="submit"> -->
+
+<button id ="paymentbutton">Pay Now</button> 
+
+</form>
+
+
+    </div>
+     <!-- box2 is end above its a payment where user has to put card detials -->
+</div>
+
+</body>
+
+</html>
+
+<script>
+    var form = document.getElementById("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var cardnumber = document.getElementById("cardnumber").value;
+  var cardholdername = document.getElementById("cardholdername").value;
+  var cvv1 = document.getElementById("cvv1").value;
+  if (cvv1.length !== 3) {
+    return alert("Enter 3 digit cvv");
+  }
+  if (cardholdername == "" || cardholdername == "" || cvv1 == "") {
+    return alert("Enter Card Detail");
+  }
+  document.getElementById("paymentbutton").textContent = "Order Placed Successfully";
+});
+</script>
+
+
+
+
+
