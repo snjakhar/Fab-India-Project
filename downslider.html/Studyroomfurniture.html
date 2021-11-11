@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BED ROOM</title>
+    <style>
+        /* #product_container{
+            display: grid;
+            height: auto;
+            width: 100%;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3,30%);
+            justify-content: space-around;
+        }
+        #product_container>div{
+            border-radius: 5px;
+            border: 1px solid teal;
+
+        }
+        #product_container h3{
+            display: block;
+            margin: 0px;
+
+        }
+        #product_container h4{
+            display: inline-block;
+            margin: 0px;
+            padding-top: 10px;
+            width: 50%;
+            margin-right: 20px;
+        }
+        img{
+            width: 100%;
+            height: 85%;
+
+        } */
+/* 
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto ;
+            gap: 10px;
+        }
+        #mydiv{
+            border: 1px solid grey;
+            width: 50%;
+            height: 300px;
+            text-align: center;
+        } */
+
+        .container{
+            display: grid;
+            grid-template-areas:
+            "a b";
+
+        }
+        .textbox{
+            grid-area: "a";
+        }
+        .productbox{
+            grid-area: "b";
+        }
+        .whitestrip{
+            border: 1px solid blue;
+            margin-bottom: 30px;
+            padding: 20px;
+            font-size: 20px;
+            margin-right: 60px;
+            margin-top: 40px;
+            background-color: whitesmoke;
+            width: 93%;
+        }
+        #mydiv{
+            border: 1px solid green;
+            width: 200px;
+            height: 250px;
+            
+            
+        }
+        #product_container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            text-align: center;
+            
+        }
+          .textBox span {
+        height: 15px;
+        width: 15px;
+        background-color: brown;
+        border-radius: 50%;
+        display: inline-block;
+        }
+
+        img{
+            width: 100%;
+            height:200px
+        }
+        .smalldiv{
+            border: 1px solid grey;
+            background-color: whitesmoke;
+            width: 250px;
+            border-radius: 10px;
+        }
+        button{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #mrp{
+            display: inline-block;
+            color: red;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        #Addprod{
+            width: 94%;
+            margin-left: 0;
+            margin-top: 2%;
+            border: 1px solid teal;
+            height: 30px;
+            text-align: center;
+            padding:10px;
+            color: black;
+            font-weight: bold;
+            background-color: whitesmoke;
+        }
+       
+       
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="textBox">
+            <div>HOME/FURNITURE/BEDROOM</div>
+            <h4>-CATEGORY</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <div >
+                <div><a href="chair.html" style="color: lightgrey;" id="categorybox">Chairs</a>(1)</div>
+                <div><a href="recks.html" style="color: lightgrey;" id="categorybox">Recks</a>(1)</div>
+                <div><a href="tables.html" style="color: lightgrey;" id="categorybox">Tables</a>(11)</div>
+            </div>
+
+            <h4>-PRICE</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+
+            <div class="pricerange">
+                <a href="price1.html">₹0-₹10000
+                    
+                </a>   (4)
+                <br/>
+                <a href="price2.html">₹10000-₹20000</a>   (2)
+                <br/>
+                <a href="price3.html">₹20000-₹30000</a>   (4)
+                <br/>
+                <a href="price4.html">₹30000-₹40000</a>   (1)
+                <br/>
+                <a href="price5.html">₹40000-₹50000</a>   (1)
+                <br/>
+                <a href="price6.html">₹50000-₹60000</a>   (1)
+                <br/>
+                <!-- <a href="#">₹60000-₹70000</a>
+                <br/>
+                <a href="#">₹70000-₹80000</a>
+                <br/>
+                <a href="#">₹80000-₹90000</a>
+                <br/> -->
+            </div>
+            <h4>-Color</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <a href="Mainbrown.html"><span></span>BROWN</a>  (5)
+            <br/>
+            <a href="Mainnatural.html"><span style="background-color: blanchedalmond;"></span>Natural</a>   (1)
+            <br/>
+            <a href="Maingrey.html"><span style="background-color: grey;"></span>grey</a>    (1)
+
+
+            <h4>+ Size</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <h4>+ Material</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+            <h4>+ Avaibility</h4>
+            <hr style="width: 25%; text-align: left; margin-left: 0;"/>
+
+
+
+        </div>
+        <div class="productbox">
+            <div class="whitestrip">
+                <span>Study Room Furniture</span><span style="color: grey; font-size: 14px;" >(Result :13)</span><span style="margin-left: 28%;">View by</span> 
+                <span style="margin-left: 6%;"> sort by:
+                    <select id="sortingBox">
+                        <option value="">Select</option>
+                        <option value="high">High to low</option>
+                        <option value="low">Low to high</option>
+                    </select>
+
+                </span>
+               
+            </div>
+            <div id="product_container"></div>
+            <div id="Addprod">Add Product Listed</div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var Tables=[
+        {
+            SKU : "10691530TT",
+            Name:"Arra Study Desk",
+            Mrp:Number(9900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v5521478587398486700/products/10691530TT.f.171021.jpg&height=475&width=475",
+            size:"76cm X 45cm X 85cm",
+            detail:["Study Desk","Primary Material-Mango Wood"],
+
+        },
+        {
+            SKU : "10693454CH",
+            Name:"Sarvik Upholestered Chair",
+            Mrp:Number(16900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v4609201116143444575/products/10693454CH.f.171021.jpg&height=475&width=475",
+            size:"54cm x 63cm x 83cm",
+            detail:["Study Chair","Primary Material-Acacia Wood"]
+        },
+        {
+            SKU : "10677196RK",
+            Name:"Mango Wood Criss-Cross Book Rack",
+            Mrp:Number(26900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v2989543845750845041/products/10677196RK.f.210421.jpg&height=940&width=940",
+            size:"50cm x 75cm x 1.8m",
+            detail:["No. of Shelves-5","Primary Material-Acacia Wood"]
+            
+        },
+        {
+            SKU : "10678724TT",
+            Name:"Piano Study Desk",
+            Mrp:Number(21900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v722565825357098121/products/10678724TT.f.230421.jpg&height=940&width=940",
+
+            size:"81cm x 41cm x 1m",
+            detail:["Study Table","Primary Material-Mango Wood"]
+            
+        },
+        {
+            SKU : "10678741SD",
+            Name:"Petite Laptop Table",
+            Mrp:Number(4299),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v1516890382810461318/products/10678741SD.f.230421.jpg&height=940&width=940",
+            size:"61cm x 31cm x 27cm",
+            detail:["Study Table","Primary Material-Sheesham Wood"]
+            
+        },
+        {
+            SKU : "110679209CH",
+            Name:"Xian Study Chair",
+            Mrp:`₹${8900}`,
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v2681332831627674066/products/10679209CH.f.230421.jpg&height=475&width=475",
+            size:"48cm x 49cm x 93cm",
+            detail:["Dining Chair","Primary Material-Sheesham Wood"]
+            
+        },
+        {
+            SKU : "10680660SD",
+            Name:"Faraday Study Table",
+            Mrp:Number(21900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v9157863621404330982/products/10680660SD.f.210421.jpg&height=940&width=940",
+            size:"1.2m x 57cm x 75cm",
+            detail:["Study Table","Primary Material-Mango Wood"]
+            
+        },
+        {
+            SKU : "10680665SD",
+            Name:"Bunai Study Table",
+            Mrp:Number(21900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v3611262613173260770/products/10680665SD.f.210421.jpg&height=475&width=475",
+            size:"1.15m x 45cm x 76cm",
+            detail:["Study Table","Primary Material- Sheesham Wood"]
+            
+        },
+        {
+            SKU : "10680666SD",
+            Name:"Dez Study Standing Desk",
+            Mrp:Number(14900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v3697304992719663145/products/10680666SD.f.210421.jpg&height=475&width=475",
+            size:"58cm X 43cm X 1.1m",
+            detail:["Study Table","Primary Material-Sheesham Wood"]
+            
+        },
+        {
+            SKU : "10682045SD",
+            Name:"Vita Study Desk",
+            Mrp:Number(29900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v5919762225709389691/products/10682045SD.f.230421.jpg&height=475&width=475",
+            size:"1.45m x 50cm x 75cm",
+            detail:["Study Desk with Cabinet","Primary Material-Acacia Wood"]
+            
+        },
+        {
+            SKU : "10682850SD",
+            Name:"Lang Tall Study Desk",
+            Mrp:Number(52900),
+            
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v8683820139561022089/products/10682850SD.f.230421.jpg&height=475&width=475",
+            size:"1.11m X 51cm X 2.02m",
+            detail:["Study Table","Primary Material-Sheehsam Wood"]
+            
+        },
+        {
+            SKU : "10677287TT",
+            Name:"Karma Lapdesk Table",
+            color:"B",
+            Mrp:Number(3499),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v6594713742354389758/products/10677287TT.f.290421.jpg&height=940&width=940",
+            size:"58cm x 32cm x 9cm",
+            detail:["Study Table","Primary Material-Sheehsam Wood"]
+            
+        },
+        {
+            SKU : " 10670517RK",
+            Name:"Mango Book Unit",
+            color:"B",
+            Mrp:Number(39900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v5859201789856862108/products/10670517RK.f.230421.jpg&height=475&width=475",
+            size:"1.1m x 33cm x 1.75m",
+            detail:["Book Rack","Primary Material-Sheesham Wood"]
+            
+        },
+    ]
+    
+
+    var items = 0;
+
+    display(Tables);
+function display(array) {
+  var pc = document.getElementById("product_container");
+  pc.innerHTML = "";
+  array.map(function (item) {
+    var pc = document.getElementById("product_container");
+    var div = document.createElement("div");
+    div.setAttribute("class","smalldiv")
+    pc.append(div);
+
+    // div.addEventListener("click", function () {
+    //   openBox(item);
+    // });
+
+    // div.innerHTML = `<img class="image" src=${item.url}>`;
+    var img=document.createElement("img")
+    img.setAttribute("src",item.url)
+    div.append(img)
+    var h3 = document.createElement("h3");
+    h3.textContent = item.Name;
+    div.append(h3);
+    var h4 = document.createElement("h4");
+    h4.setAttribute("id","mrp")
+    h4.innerHTML = "Mrp. ₹" +item.Mrp;
+    div.append(h4);
+    var btn = document.createElement("button");
+    btn.textContent = "AddToCart";
+    div.append(btn);
+    btn.addEventListener("click", function () {
+      cartButton.textContent = "-" + ++items;
+      var cartArray = JSON.parse(localStorage.getItem("cartItem")) || [];
+      cartArray.push(item.sku);
+      localStorage.setItem("cartItem", JSON.stringify(cartArray));
+    });
+
+    //  div.textContent=item.p_name;
+    // div.textContent=item.price;
+  });
+}
+
+var sorting = document.getElementById("sortingBox");
+sorting.addEventListener("change", sort_by_price);
+function sort_by_price(e) {
+  var arr = [];
+  if (e.target.value == "high") {
+    arr =  Tables.sort(function (a, b) {
+      return b.Mrp - a.Mrp;
+    });
+  } else if (e.target.value == "low") {
+    arr = Tables.sort(function (a, b) {
+      return a.Mrp - b.Mrp;
+    });
+  } else {
+  }
+  display(arr);
+}
+</script>

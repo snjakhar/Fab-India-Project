@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         img{
+            width: 100%;
+            height:200px
+        }
+        .smalldiv{
+            border: 1px solid grey;
+            background-color: whitesmoke;
+            width: 250px;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            
+        }
+        button{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #mrp{
+            display: inline-block;
+            color: red;
+            /* margin-left: 10%; */
+            
+        }
+        .whitestrip{
+            border: 1px solid blue;
+            margin-bottom: 30px;
+            padding: 15px;
+            font-size: 20px;
+            margin-right: 60px;
+            margin-top: 40px;
+            background-color: whitesmoke;
+            width: 89%;
+            margin-left: 34%;
+            width: 57%;
+            
+        }
+        #Addprod{
+            width: 57%;
+            margin-left: 34%;
+            margin-top: 2%;
+            border: 1px solid teal;
+            height: 30px;
+            text-align: center;
+            padding:10px;
+            color: black;
+            font-weight: bold;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="productbox">
+        <div class="whitestrip">
+            <span style="margin-left: 2%;">Furnitute(Chair)</span><span style="color: grey; font-size: 14px;" >(Result :1)</span><span style="margin-left: 25%; font-size: 17px;">View By :</span> 
+            <span style="font-size: 17px;margin-left: 3%;"> sort by:
+                <select id="sortingBox">
+                    <option value="">Select</option>
+                    <option value="high">High to low</option>
+                    <option value="low">Low to high</option>
+                </select>
+
+            </span>
+        </div>
+        <div id="product_container"></div>
+        <div id="Addprod">Add Products Listed</div>
+    </div>
+</body>
+</html>
+
+<script>
+    var recks=[
+    {
+            SKU : " 10670517RK",
+            Name:"Mango Book Unit",
+            color:"B",
+            Mrp:Number(39900),
+            url:"https://www.fabindia.com/ccstore/v1/images/?source=/file/v5859201789856862108/products/10670517RK.f.230421.jpg&height=475&width=475",
+            size:"1.1m x 33cm x 1.75m",
+            detail:["Book Rack","Primary Material-Sheesham Wood"]
+            
+        },
+    ]
+
+    var items = 0;
+
+    display(recks);
+function display(array) {
+  var pc = document.getElementById("product_container");
+  pc.innerHTML = "";
+  array.map(function (item) {
+    var pc = document.getElementById("product_container");
+    var div = document.createElement("div");
+    div.setAttribute("class","smalldiv")
+    pc.append(div);
+
+    // div.addEventListener("click", function () {
+    //   openBox(item);
+    // });
+
+    // div.innerHTML = `<img class="image" src=${item.url}>`;
+    var img=document.createElement("img")
+    img.setAttribute("src",item.url)
+    div.append(img)
+    var h3 = document.createElement("h3");
+    h3.textContent = item.Name;
+    div.append(h3);
+    var h4 = document.createElement("h4");
+    h4.setAttribute("id","mrp")
+    h4.innerHTML = "Mrp. ₹" +item.Mrp;
+    div.append(h4);
+    var btn = document.createElement("button");
+    btn.textContent = "AddToCart";
+    div.append(btn);
+    btn.addEventListener("click", function () {
+      cartButton.textContent = "-" + ++items;
+      var cartArray = JSON.parse(localStorage.getItem("cartItem")) || [];
+      cartArray.push(item.sku);
+      localStorage.setItem("cartItem", JSON.stringify(cartArray));
+    });
+
+    //  div.textContent=item.p_name;
+    // div.textContent=item.price;
+  });
+}
+
+var sorting = document.getElementById("sortingBox");
+sorting.addEventListener("change", sort_by_price);
+function sort_by_price(e) {
+  var arr = [];
+  if (e.target.value == "high") {
+    arr =  recks.sort(function (a, b) {
+      return b.Mrp - a.Mrp;
+    });
+  } else if (e.target.value == "low") {
+    arr = chair.sort(function (a, b) {
+      return a.Mrp - b.Mrp;
+    });
+  } else {
+  }
+  display(arr);
+}
+</script>
