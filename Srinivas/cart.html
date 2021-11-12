@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="fotter.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css files/head2.css">
-=======
     <link rel="stylesheet" href="css files\head2.css">
->>>>>>> 72bd8c1a5b423fb1e53fba1cb9aca5e5e48c7485
     <style>
       * {
         box-sizing: border-box;
@@ -100,37 +96,37 @@
         width: 220px;
         height: 27px;
         border-radius: 5px;
+        border: none;
       }
-      
+      .proceed:hover,.apply:hover{
+        font-weight: bolder;
+        
+      }
+      #code{
+        width: 220px;
+        height: 25px;
+        border: 1px groove lightgrey;
+        border-radius: 3px;
+      }
     </style>
   </head>
   <body>
     <!-- ......Header Start.......... -->
-    <div class ="containerS">
-      <a href="Home page.html"><img id ="img" src="https://www.fabindia.com/file/general/fab_india_logo.png" alt=""></a>
+    <div style="margin-bottom: 5px;" class ="containerS">
+      <div style="margin-left: 40%;">
+        <a href="/Homepage.html"><img width="150px" height="60px" id ="img" src="https://www.fabindia.com/file/general/fab_india_logo.png" alt=""></a>
+      </div>
       <div id= "item"> 
-         <a href="#"><img src="https://www.fabindia.com/file/general/call-answer_n.svg"  alt="height:30px;">+91 8010488888</a> 
+         <a href="#"><img src="https://www.fabindia.com/file/general/call-answer_n.svg"  ><span style="font-size: 18px;">+91 8010488888</span></a> 
       </div>
   </div>
-<<<<<<< HEAD
- 
- <div class ="h2">  Login Details
-  <hr> </div>
-=======
-
  
  <!-- <div class ="h2">  Login Details
   <hr> </div> -->
->>>>>>> 72bd8c1a5b423fb1e53fba1cb9aca5e5e48c7485
   
  
    <div id ="line1"></div>
    </div>
-<<<<<<< HEAD
-=======
-   <br>
-    
->>>>>>> 72bd8c1a5b423fb1e53fba1cb9aca5e5e48c7485
     <!-- .............Header End............. -->
  
     <div class="container">
@@ -146,7 +142,7 @@
         <span>Total Cart Amount :₹ </span>
         <span id="subtotal"></span>
         <hr style="width: 90%; text-align: left; margin-left: 0" />
-
+        
         <button class="proceed" onclick="signup()">Proceed to Checkout</button>
         <hr style="width: 90%; text-align: left; margin-left: 0" />
         <div>Coupon Code</div>
@@ -383,7 +379,8 @@
     var sub = document.getElementById("subtotal").textContent;
 
     localStorage.setItem("total_payment", sub);
-    window.location.href = "\sarfaraz\Signup.html";
+    window.location.href="/sarfaraz/Signup.html";
+    
   }
   var valid = 1;
   document.querySelector(".apply").addEventListener("click", function () {

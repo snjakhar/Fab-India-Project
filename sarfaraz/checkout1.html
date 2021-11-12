@@ -22,6 +22,7 @@
    <div class ="h2">     Login Details
     <br> <hr>
     <label id = "email11" >Email Address:</label>
+    <span style="font-weight:300;font-size: medium;" id="showEmail"></span>
     <br>
      </div>
     
@@ -283,6 +284,11 @@
 </html>
 
  <script>
+
+  document.getElementById("showEmail").textContent=localStorage.getItem("GE");
+
+
+
      document.getElementById("button2").addEventListener("click", checkoutfun);
 
      var registeruserarray =JSON.parse(localStorage.getItem("userdatajoin")) || [];
@@ -345,4 +351,6 @@ if(indiseid1input101=="" && indiseid1input102==""&& indiseid1input107=="" && ind
 
 
  }
+
+
  </script>

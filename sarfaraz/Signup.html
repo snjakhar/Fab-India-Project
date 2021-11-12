@@ -40,10 +40,11 @@
            
            
             <!-- <h4>Email Address:</h4> -->
-            <label id = "email11" >Email Address:</label>
+            <label id = "email11" >Email Address / Mobile Number</label>
+            <span id="showEmail"></span>
             <br>
           
-            <input id = "email" type="email" placeholder="Enter your Email-Id" >
+            <input id = "email" type="text" >
             <br>
             <button id ="buttonguestEmail" > 
                 <!-- <a href="checkout1.html" target="_self"  >Continue Securely</a> -->
@@ -228,16 +229,22 @@
 
 
 <script>
+
+
+
+
+
    document.getElementById("buttonguestEmail").addEventListener("click", buttonguestEmail123);
 
    var registeruserarray =JSON.parse(localStorage.getItem("userdatajoin")) || [];
    // console.log(registeruserarray)
 
 
-   function buttonguestEmail123(e){
-       e.preventDefault();
+   function buttonguestEmail123(){
+      //  e.preventDefault();
      //  console.log("here")
-
+     var ge=document.getElementById("email").value;
+    localStorage.setItem("GE",ge)
      var buttonguestEmail = document.getElementById("email").value;
      console.log("buttonguestEmail", buttonguestEmail);
 
@@ -288,12 +295,7 @@ for(var i =0; i<registeruserarray.length; i++){
         break;
 
     } 
-    // here is the problem the else part 
  
-
-
-
-    
 }
 
 if(flag==false){
@@ -304,15 +306,7 @@ if(flag==false){
 }
 
 
-
-
-
-
-
-
-
 }
-
 
 
 
