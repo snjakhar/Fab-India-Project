@@ -14,6 +14,16 @@
         margin: 0px;
         
       }
+      #bag{
+        font-weight: bolder;
+        font-size:25px;
+        color:grey;
+        border: 2px solid grey;
+        border-radius: 40px;
+        width: 20px;
+        text-align: center;
+        
+      }
     </style>
   </head>
   <body>
@@ -23,7 +33,7 @@
     <div class="profile">
       <div class="symbol">
         <div>
-          <a href="#">
+          <a href="">
             <img
               class="symbimg"
               src="https://www.fabindia.com/file/general/icon-storelocator-black.png"
@@ -31,12 +41,13 @@
           /></a>
         </div>
         <div>
-          <a href="sarfaraz\Signup.html">
+          <a href="sarfaraz/Signup.html">
             <img
-              class="symbimg"
+             
               src="https://www.fabindia.com/file/general/icon-signin-black.png"
-              alt=""
+              alt="SignIN"
           /></a>
+          
         </div>
       </div>
       <div class="logo">
@@ -74,14 +85,16 @@
                 alt=""
             /></a>
         </div>
-        <div>
+        <div style="width:30px;display: inline-block;">
           <a href="Srinivas\cart.html">
-              <img
-                class="symbimg"
+              <img width="100%" height="100%"
+               
                 src="https://www.fabindia.com/file/general/icon-bag-black.png"
                 alt=""
             /></a>
+           
         </div>
+        <span id="bag"></span> 
       </div>
     </div>
     <div class="profile">
@@ -560,3 +573,10 @@
   </body>
 </html>
 <script src="Mayur/image-slider.js"></script>
+<script>
+  
+
+  var cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
+  var len=cartData.length;
+  document.getElementById("bag").textContent=len;
+</script>
