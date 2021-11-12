@@ -1,4 +1,3 @@
-
 #container {
   display: flex;
   width: 99%;
@@ -6,7 +5,7 @@
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   border: 1px solid transparent;
- 
+
   flex-direction: column;
   z-index: 2;
 }
@@ -453,7 +452,7 @@ a {
 .sociallogo > div {
   border: 1px solid transparent;
   width: 15%;
-  height:40%;
+  height: 40%;
 
   display: inline-flex;
 }
@@ -465,15 +464,11 @@ a {
   width: 170%;
 }
 .copyright {
- 
-
-width: 100%;
+  width: 100%;
 
   color: sienna;
   font-size: 15px;
   margin-left: 140%;
-
-
 }
 
 @media screen and (min-width: 0px) and (max-width: 599px) {
@@ -482,10 +477,9 @@ width: 100%;
     width: 99%;
     height: auto;
     font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
-max-width: min-content;
+    max-width: min-content;
     border: 1px solid transparent;
     padding: 5px;
-    
   }
   h1 {
     color: rgb(109, 72, 72);
@@ -563,7 +557,7 @@ max-width: min-content;
     border: 0;
   }
   /* ------------shopping div------------- */
-  
+
   #seconddiv {
     border: 1px solid transparent;
     display: flex;
@@ -577,7 +571,7 @@ max-width: min-content;
     display: flex;
     gap: 15px;
     justify-content: center;
-  
+
     font-size: 13px;
     list-style-type: none;
     font-weight: bold;
@@ -587,18 +581,18 @@ max-width: min-content;
     text-decoration-line: none;
     color: darkslategray;
   }
-  
+
   /* Slideshow container */
   .slideshow-container {
     position: relative;
     margin: auto;
   }
-  
+
   /* Hide the images by default */
   .mySlides {
     display: none;
   }
-  
+
   /* Next & previous buttons */
   .prev,
   .next {
@@ -614,13 +608,13 @@ max-width: min-content;
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
-  
+
   /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
+
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
@@ -642,7 +636,7 @@ max-width: min-content;
     display: flex;
     justify-content: center;
   }
-  
+
   .dot {
     cursor: pointer;
     height: 5px;
@@ -659,7 +653,7 @@ max-width: min-content;
   .mySlides img {
     width: 100%;
   }
-  
+
   .active,
   .dot:hover {
     background-color: white;
@@ -669,7 +663,7 @@ max-width: min-content;
     display: flex;
     border: 1px solid transparent;
     width: 100%;
-  
+
     padding: 1px;
   }
   .thirddiv {
@@ -683,7 +677,7 @@ max-width: min-content;
   .thirddiv > p {
     text-align: center;
     font-size: 20px;
-  
+
     /*--------------- FORTHDIV */
   }
   .fourthdiv {
@@ -693,14 +687,14 @@ max-width: min-content;
     height: 400px;
     padding: 10px;
     justify-content: center;
-  
+
     background-color: whitesmoke;
   }
   .fourthdiv > div {
     border: 1px solid transparent;
     width: 250px;
     height: 100%;
-  
+
     color: brown;
     text-align: center;
   }
@@ -711,10 +705,10 @@ max-width: min-content;
     color: #b8afa9;
   }
   /* ----------FIGTHDIV */
-  
+
   .fifthdiv {
     display: flex;
-  
+
     gap: 50px;
     width: 98%;
     height: 550px;
@@ -729,12 +723,12 @@ max-width: min-content;
   }
   .fifthdiv > div > img {
     width: 100%;
-  
+
     /* ---------------------sixthdiv */
   }
   .sixthdiv {
     display: flex;
-  
+
     gap: 50px;
     width: 98%;
     height: 250px;
@@ -762,7 +756,7 @@ max-width: min-content;
     width: 100%;
   }
   /* seventhdiv-------------------------- */
-  
+
   .seventhdiv {
     display: grid;
     background-color: whitesmoke;
@@ -773,7 +767,7 @@ max-width: min-content;
     border: 1px solid transparent;
     justify-content: space-around;
     color: #7d7faa;
-  
+
     grid-template-areas:
       "a1 a1 a1 a1 a1 a1"
       "a2 a2 a2 a2 a2 a2"
@@ -871,7 +865,7 @@ max-width: min-content;
     height: 250px;
     border-radius: 5px;
   }
-  
+
   #tablecontent > div:nth-child(3) {
     grid-area: a22;
     border-left: 1px solid darkgray;
@@ -879,7 +873,7 @@ max-width: min-content;
     height: 250px;
     border-radius: 5px;
   }
-  
+
   #tablecontent > div:nth-child(4) {
     grid-area: a33;
     border-left: 1px solid darkgray;
@@ -899,7 +893,7 @@ max-width: min-content;
   }
   #tablecontent > div > h4 {
     margin-left: 15px;
-  
+
     margin-top: 10px;
   }
   #tablecontent > div:nth-child(5) {
@@ -918,11 +912,11 @@ max-width: min-content;
   #tablecontent > div:nth-child(5) > div {
     border-right: 1px solid darkgray;
     width: 29%;
-  
+
     color: rgb(72, 54, 10);
     font-weight: lighter;
   }
-  
+
   .sociallogo > p {
     margin-top: 2px;
     text-align: left;
@@ -930,43 +924,25 @@ max-width: min-content;
   .sociallogo > div {
     border: 1px solid transparent;
     width: 15%;
-    height:40%;
-  
+    height: 40%;
+
     display: inline-flex;
   }
   .soclogo {
     width: 50%;
   }
-  
+
   .applogo {
     width: 170%;
   }
   .copyright {
-   
-  
-  width: 100%;
-  
+    width: 100%;
+
     color: sienna;
     font-size: 15px;
     margin-left: 140%;
-  
-  
   }
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* header----------------------------------------------------------------------------------------- */
 #cont {
@@ -977,7 +953,6 @@ max-width: min-content;
   flex-direction: column;
   position: fixed;
   /* margin: auto; */
- 
 
   background-color: white;
   z-index: 2;
@@ -1034,7 +1009,7 @@ ul {
   flex-wrap: nowrap;
   font-size: 12px;
   font-family: "Lucida Sans";
-  justify-content:center;
+  justify-content: center;
   gap: 25px;
 }
 
@@ -1042,4 +1017,14 @@ a {
   text-decoration: none;
   color: darkslategray;
   font-weight: bold;
+}
+#furn:hover {
+  background-color: burlywood;
+  height: 20px;
+  width: 80px;
+  border-radius: 5px;
+  color: black;
+  margin: auto;
+  text-align: center;
+  padding-top: 5px;
 }

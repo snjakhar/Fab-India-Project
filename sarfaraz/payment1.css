@@ -1,7 +1,18 @@
-#body {
+body {
   background-color: #f4f2e5;
-  font-family: "Unna", serif;
- 
+  font-family:sans-serif;
+}
+
+.sym{
+  float: right;
+  margin-right: 70px;
+  color: grey;
+}
+a:hover{
+  /* background-color: burlywood; */
+  font-size: 22px;
+  font-weight: 900;
+
 }
 .container {
   display: flex;
@@ -9,7 +20,7 @@
   height: 80px;
   width: 98%;
   background-color: #f4f2e5;
-  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 
   padding: 10px;
   flex-direction: row;
 }
@@ -26,7 +37,7 @@
 
   text-align: right;
   font-weight: bold;
-  font-family: " sans-serif";
+ 
   color: maroon;
 }
 a {
@@ -36,9 +47,10 @@ a {
 }
 
 #item > a > img {
-  height: 10px;
-  width: 10px;
-  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+ 
 }
 .h2 {
   background-color: #f4f2e5;
@@ -132,12 +144,12 @@ a {
 #monthselect {
   background-color: #f4f2e5;
   width: 70px;
-  font-family: sans-serif;
+  
 }
 #yearsselect {
   background-color: #f4f2e5;
   width: 70px;
-  font-family: sans-serif;
+  
 }
 #cvv1 {
   background-color: #f4f2e5;
@@ -145,7 +157,7 @@ a {
 }
 label {
   color: rgb(84, 80, 80);
-  font-family: "Unna", serif;
+ 
   font-weight: bold;
 }
 h2 {
@@ -159,7 +171,7 @@ input {
 }
 select {
   color: rgb(84, 80, 80);
-  font-family: "Unna", serif;
+  
   border: 1px solid lightgray;
 }
 
@@ -168,4 +180,19 @@ select {
   word-wrap: normal;
   font-size: 8px;
   margin-top: 45px;
+}
+.showAmount{
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(53, 52, 52);
+}
+.my{
+  height: 28px;
+  border-radius: 3px;
+ margin-top: 8px;
+}
+#cvv1,#cardholdername,#cardnumber{
+  border-radius: 3px;
+ margin-top: 8px;
+
 }
