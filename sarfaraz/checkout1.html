@@ -24,7 +24,15 @@
     <label id = "email11" >Email Address:</label>
     <span style="font-weight:300;font-size: medium;" id="showEmail"></span>
     <br>
+    <span style="font-weight:300;font-size: medium;" id="showEmail1"></span>
+    <br>
      </div>
+     <!-- a small changes  -->
+     <!-- <span style="font-weight:300;font-size: medium;" id="showEmail1"></span> -->
+     
+      </div>
+
+     <!-- a small changes in above code -->
     
     <div class ="h2">
         Shipping/Billing Address
@@ -146,7 +154,7 @@
 <br>
 
 <input id = "indiseid1input109" type="text" name=""  placeholder="Address Line 2">
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 <button id = "button2">Save & Continue</button> 
 
         </div>
@@ -285,8 +293,9 @@
 
  <script>
 
-  document.getElementById("showEmail").textContent=localStorage.getItem("GE");
-  document.getElementById("showEmail").textContent =localStorage.getItem("RegisterUserEmail");
+  document.getElementById("showEmail1").textContent=localStorage.getItem("GE");
+  // the below code is perfactly able to show registerd user email address on sign in email 
+   document.getElementById("showEmail").textContent =localStorage.getItem("RegisterUserEmail");
 
 
 

@@ -257,6 +257,9 @@
 </body>
 </html>
 <script>
+   
+
+
     document.getElementById("button").addEventListener("click", GuestEmailfun);
     var registeruserarray =JSON.parse(localStorage.getItem("userdatajoin")) || [];
 
@@ -269,7 +272,7 @@
          alert("Please Fill Your Email Address")
          document.getElementById("Gemail").removeEventListenerr("click", GuestEmailfun);
      }else if(Gemail !=""){
-       window.location.href="checkout1.html"
+       window.location.href="checkout1.html";
      }
 
 
