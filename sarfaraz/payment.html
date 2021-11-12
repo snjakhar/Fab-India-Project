@@ -16,14 +16,15 @@
     <div class ="container">
        <a href="Home page.html"><img src="https://www.fabindia.com/file/general/fab_india_logo.png" alt=""></a> 
         <div id= "item"> 
-            <img src="https://www.fabindia.com/file/general/call-answer_n.svg" alt="height:30px;">
-            +918010488888</div>
+            <img  src="https://www.fabindia.com/file/general/call-answer_n.svg" alt="height:30px;">
+            +91-8010488888</div>
     </div>
 
    
   
   
-        <p class ="h2"> Payment Details</p>
+        <p style="display: inline-block;" class ="h2"> Total Amount Payable</p>
+         <span id="amount"></span>
         <hr>
      </div>
 
@@ -140,6 +141,9 @@ form.addEventListener("submit", function (e) {
   }
   document.getElementById("paymentbutton").textContent = "Order Placed Successfully";
 });
+
+var total_payment=localStorage.getItem("total_payment");
+document.getElementById("amount").textContent=":₹"+total_payment+"/-";
 </script>
 
 

@@ -1,6 +1,13 @@
+#amount{
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(87, 85, 85);
+
+  
+}
 #body {
   background-color: #f4f2e5;
-  font-family: "Unna", serif;
+  font-family: sans-serif;
   padding: 15px;
 }
 .container {

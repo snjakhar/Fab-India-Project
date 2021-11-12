@@ -72,26 +72,36 @@
       .qnty {
         margin-left: 120px;
       }
+      .apply,.proceed{
+        background-color: gold;
+        width: 220px;
+        height: 27px;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="shoppingcart">
         <h2 style="margin-bottom: 5px">Your Shopping Cart</h2>
-        <hr />
+        <hr style="width: 90%; text-align: left; margin-left: 0" />
         <div class="shoppinggrid"></div>
       </div>
       <div class="summary">
         <h2 style="margin-bottom: 5px">Order Summary</h2>
 
-        <hr />
+        <hr style="width: 90%; text-align: left; margin-left: 0" />
         <span>Total Cart Amount :₹ </span>
         <span id="subtotal"></span>
-        <hr />
+        <hr style="width: 90%; text-align: left; margin-left: 0" />
 
+       <button class="proceed" onclick="signup()">Proceed to Checkout</button>
+        <hr style="width: 90%; text-align: left; margin-left: 0" />
+        <div>Coupon Code</div>
+        <input id="code" type="text" /><br />
+        <span id="cerror"></span>
         <br />
-        <br />
-        <button onclick="signup()">Proceed to Checkout</button>
+        <button class="apply">Apply</button>
       </div>
     </div>
   </body>
@@ -116,7 +126,7 @@
       sp1.textContent = "Price: ₹" + item.mrp;
       var br1 = document.createElement("br");
       var sp2 = document.createElement("span");
-      sp2.textContent = item.size;
+      sp2.textContent = "Size:" + item.size;
       var sp3 = document.createElement("span");
       sp3.setAttribute("class", "qnty");
       sp3.textContent = "Quantity";
@@ -150,7 +160,9 @@
           }
         }
         localStorage.setItem("cartItems", JSON.stringify(cartData));
-
+        var sub = document.getElementById("subtotal");
+        var t = +sub.textContent;
+        sub.textContent = t - item.mrp;
         display(cartData);
       });
       var counter = 1;
@@ -194,6 +206,29 @@
   }
 
   function signup() {
-    window.location.href = "/sarfaraz/Signup.html";
+    var sub = document.getElementById("subtotal").textContent;
+
+    localStorage.setItem("total_payment", sub);
+    window.location.href = "file:///D:/masai_school/Git%20Desktop/Fab-India-Project/sarfaraz/signup.html";
   }
+  var valid = 1;
+  document.querySelector(".apply").addEventListener("click", function () {
+    var sub = +document.getElementById("subtotal").textContent;
+    var code = document.getElementById("code").value;
+    if (code == "fab30" && valid == 1) 
+    {
+      valid=2;
+      document.getElementById("subtotal").textContent = (sub * 70) / 100;
+      document.getElementById("cerror").textContent="Coupon Applied ☺"
+      return;
+    } 
+    else if(valid==2){
+     document.getElementById("cerror").textContent="Coupon Applied 😉"
+     document.getElementById("cerror").style="color:green"
+    }
+    else {
+      document.getElementById("cerror").textContent="Invalid Code😑"
+      document.getElementById("cerror").style="color:red"
+    }
+  });
 </script>
