@@ -271,7 +271,12 @@ document.getElementById("singinButton").addEventListener("click",loginfn);
 function loginfn(e){
     e.preventDefault();
     console.log("hey i am working ");
+    // i am tring to to get already used registed user email 
 var RegisterUserEmail =document.getElementById("RegisterUserEmail").value;
+localStorage.setItem("RegisterUserEmail",RegisterUserEmail);
+
+
+
 var RegisterUserPassword =  document.getElementById("RegisterUserPassword").value;
 
 console.log("RegisterUserEmail" , RegisterUserEmail , "RegisterUserPassword", RegisterUserPassword)
