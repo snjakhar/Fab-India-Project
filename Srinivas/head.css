@@ -7,8 +7,9 @@
   position: fixed;
   margin: auto;
 
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   z-index: 2;
+  border: 1px groove grey;
 }
 
 .profile {
@@ -18,6 +19,7 @@
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  
 }
 .profile > div {
   width: 31%;

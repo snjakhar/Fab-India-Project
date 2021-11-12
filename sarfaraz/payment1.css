@@ -1,18 +1,17 @@
 body {
   background-color: #f4f2e5;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 
-.sym{
+.sym {
   float: right;
   margin-right: 70px;
   color: grey;
 }
-a:hover{
+a:hover {
   /* background-color: burlywood; */
   font-size: 22px;
   font-weight: 900;
-
 }
 .container {
   display: flex;
@@ -20,7 +19,7 @@ a:hover{
   height: 80px;
   width: 98%;
   background-color: #f4f2e5;
- 
+
   padding: 10px;
   flex-direction: row;
 }
@@ -37,7 +36,7 @@ a:hover{
 
   text-align: right;
   font-weight: bold;
- 
+
   color: maroon;
 }
 a {
@@ -50,7 +49,6 @@ a {
   height: 20px;
   width: 20px;
   margin-right: 5px;
- 
 }
 .h2 {
   background-color: #f4f2e5;
@@ -89,7 +87,6 @@ a {
   margin-left: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- 
 }
 /* box2 right hand sid */
 
@@ -144,12 +141,10 @@ a {
 #monthselect {
   background-color: #f4f2e5;
   width: 70px;
-  
 }
 #yearsselect {
   background-color: #f4f2e5;
   width: 70px;
-  
 }
 #cvv1 {
   background-color: #f4f2e5;
@@ -157,7 +152,7 @@ a {
 }
 label {
   color: rgb(84, 80, 80);
- 
+
   font-weight: bold;
 }
 h2 {
@@ -165,34 +160,84 @@ h2 {
   color: #80021d;
 }
 input {
-  
   padding: 5px;
   border: 1px solid lightgray;
 }
 select {
   color: rgb(84, 80, 80);
-  
+
   border: 1px solid lightgray;
 }
 
-.h6{
+.h6 {
   text-align: justify;
   word-wrap: normal;
   font-size: 8px;
   margin-top: 45px;
 }
-.showAmount{
+.showAmount {
   font-weight: bold;
   font-size: 22px;
   color: rgb(53, 52, 52);
 }
-.my{
+.my {
   height: 28px;
   border-radius: 3px;
- margin-top: 8px;
+  margin-top: 8px;
 }
-#cvv1,#cardholdername,#cardnumber{
+#cvv1,
+#cardholdername,
+#cardnumber {
   border-radius: 3px;
- margin-top: 8px;
+  margin-top: 8px;
+}
+.blackBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.modalBox {
+  background-image: url(https://mediacloud.theweek.com/image/private/s--yHGeAyrs--/v1608528305/istock-527028804.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 520px 300px;
+  width: 40vw;
+  height: 40vh;
+  background-color: rgb(218, 207, 113);
+  z-index: 3;
+  /* left: 20%; */
+  top: 18%;
+  position: fixed;
+  margin-left: 30%;
+  /* margin-top: -10px; */
+  border-radius: 20px;
+  color: black;
+  padding-top: 20px;
+}
+.modalBox > div {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: 600;
+}
 
+#finalbtn {
+  margin-top: 40px;
+  background-color: rgb(253, 211, 100);
+  border-radius: 10px;
+  margin-right: 10%;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+}
+#finalbtn:hover {
+  font-weight: bold;
+}
+#first {
+  font-size: 26px;
 }

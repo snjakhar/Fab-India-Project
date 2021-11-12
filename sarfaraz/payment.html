@@ -18,8 +18,30 @@
 </head>
 
 
-<body>
+<body onload=hideBox() >
    
+  <div onclick="hideBox()" class="blackBox">
+  
+  </div>
+  <div class="modalBox">
+    <button onclick="hideBox()" style="float: right">X</button>
+    <div id="first">Your Order Placed Successfully</div>
+    <div>Thank You For Shopping</div>
+    <div>Your order will be placed soon</div>
+    <div><a href="/Homepage.html"><button id="finalbtn">Go To Home Page</button></a></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
    
     <div class ="container">
         <a href="/Homepage.html"><img id ="img" src="https://www.fabindia.com/file/general/fab_india_logo.png" alt=""></a>
@@ -121,7 +143,7 @@
 
         <!-- <input  id = "submit" type="submit" placeholder="submit"> -->
 
-<button id ="paymentbutton">Pay Now</button> 
+<button  id ="paymentbutton">Pay Now</button> 
 
 </form>
 
@@ -265,12 +287,26 @@ form.addEventListener("submit", function (e) {
   if (cardholdername == "" || cardholdername == "" || cvv1 == "") {
     return alert("Enter Card Detail");
   }
-  document.getElementById("paymentbutton").textContent = "Order Placed Successfully";
+  // document.getElementById("paymentbutton").textContent = "Order Placed Successfully";
+  openBox();
 });
 
 document.querySelector(".showAmount").textContent=" ₹ "+localStorage.getItem("total_payment")+"/-"
 
-
+function hideBox() {
+ 
+  
+  document.querySelector(".modalBox").style.display = "none";
+  document.querySelector(".blackBox").style.display = "none";
+  
+}
+function openBox() {
+ 
+  
+ document.querySelector(".modalBox").style.display = "block";
+ document.querySelector(".blackBox").style.display = "block";
+ 
+}
 </script>
 
 

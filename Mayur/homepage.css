@@ -1,6 +1,10 @@
+body{
+ margin:0px;
+ padding: 0px;
+}
 #container {
   display: flex;
-  width: 99%;
+  width: 96vw;
   height: auto;
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -181,7 +185,7 @@ a {
   transform: translateY(-50px);
 }
 .mySlides img {
-  width: 100%;
+  width: 98vw;
 }
 
 .active,
@@ -340,7 +344,7 @@ a {
 }
 .bigimg > div {
   border: 1px solid transparent;
-  width: 99%;
+  width: 98vw;
   height: 90%;
 }
 .video {
@@ -355,7 +359,7 @@ a {
   margin: auto;
 }
 .footcontainer {
-  width: 100%;
+  width: 97vw;
   height: 670px;
   border: 1px solid;
   background-image: url("https://www.colourbox.com/preview/6273218-vintage-floral-seamless-pattern-on-brown.jpg");
@@ -374,7 +378,7 @@ a {
 #tablecontent {
   display: grid;
   border: 1px solid black;
-  width: 97%;
+  width: 95%;
   height: 550px;
   background-color: whitesmoke;
   margin: auto;
