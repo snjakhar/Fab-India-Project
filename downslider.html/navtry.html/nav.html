@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .nav{
+      background-color: #242526;
+      position: fixed;
+      z-index: 99;
+      height: 65px;
+      line-height: 64px;
+    }
+
+    nav .wrapper{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* li tags */
+    .nav-links li{
+      list-style: none;
+    }
+    /* logo */
+    .wrapper .logo a{
+      color: white;
+      font-size: 27px;
+      font-weight: 600;
+    }
+    /* menu */
+    .nav-links li a{
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 9px 15px;
+      background-color: pink;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover{
+      background-color: #232425;
+    }
+
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="">Coding boy</a></div>
+      <ul class="nav-links">
+        <li><a href="">Hey</a></li>
+        <li><a href="">Bro</a></li>
+        <li><a href="">How</a></li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>

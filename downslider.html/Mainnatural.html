@@ -6,6 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         body{
+            animation: slider 13s ease-in-out infinite;
+            background-size: cover;
+        }
+        @keyframes slider{
+          0%{ background-image: url("https://image.freepik.com/free-photo/orange-pink-watercolor-abstract-background_3590-204.jpg");}
+          10%{ background-image: url("https://image.freepik.com/free-photo/orange-pink-watercolor-abstract-background_3590-204.jpg");}
+
+          20%{background-image: url("https://img.freepik.com/free-photo/bright-green-watercolor-abstract-background_3590-278.jpg?size=338&ext=jpg");}
+          30%{background-image: url("https://img.freepik.com/free-photo/bright-green-watercolor-abstract-background_3590-278.jpg?size=338&ext=jpg");}
+
+          40%{background-image: url("https://img.freepik.com/free-vector/abstract-background-with-watercolor-shapes-empty-space_23-2149119883.jpg?size=338&ext=jpg");}
+          50%{background-image: url("https://img.freepik.com/free-vector/abstract-background-with-watercolor-shapes-empty-space_23-2149119883.jpg?size=338&ext=jpg");}
+
+
+          60%{background-image: url("https://img.freepik.com/free-vector/watercolor-painted-abstract-background_23-2149111769.jpg?size=338&ext=jpg");}
+          70%{background-image: url("https://img.freepik.com/free-vector/watercolor-painted-abstract-background_23-2149111769.jpg?size=338&ext=jpg");}
+
+          80%{background-image: url("https://as1.ftcdn.net/v2/jpg/02/51/94/20/500_F_251942017_I826iXsunIUs1pYBrOtv9Q53NX3rK3lT.jpg");}
+          90%{background-image: url("https://as1.ftcdn.net/v2/jpg/02/51/94/20/500_F_251942017_I826iXsunIUs1pYBrOtv9Q53NX3rK3lT.jpg");}
+
+          100%{background-image: url("https://img.freepik.com/free-photo/grey-watercolor-soft-abstract-background_3590-96.jpg?size=338&ext=jpg");}
+          0%{background-image: url("https://img.freepik.com/free-photo/grey-watercolor-soft-abstract-background_3590-96.jpg?size=338&ext=jpg");}
+
+        }
+        img {
+        width: 100%;
+        height: 200px;
+        display: block;
+        opacity: 1;
+        transition: 0.2s ease;
+        backface-visibility: hidden;
+        /* transition: transform 0.8s ease; */
+
+        /* border: 1px solid red; */
+      }
+
+      #product_container > div {
+        /* height: 300px; */
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      /* [2] Transition property for smooth transformation of images */
+
+      /* [3] Finally, transforming the image when container gets hovered */
+      #product_container > div:hover img {
+        transform: scale(1.1);
+        height: 76%;
+      }
          img{
             width: 100%;
             height:200px
@@ -18,7 +68,7 @@
         }
         .smalldiv{
             border: 1px solid grey;
-            background-color: whitesmoke;
+            background-color: rgb(233, 217, 226);
             width: 250px;
             border-radius: 10px;
             
@@ -35,8 +85,14 @@
             /* margin-left: 10%; */
             
         }
+        a{
+            color: red;
+        }
+        a:hover{
+            color: blue;
+        }
         .whitestrip{
-            border: 1px solid blue;
+            border: 1px solid wheat;
             margin-bottom: 30px;
             padding: 10px;
             font-size: 20px;
@@ -110,6 +166,9 @@
             font-weight: bold;
             background-color: whitesmoke;
         }
+        #sortingBox{
+            border-radius: 10px;
+        }
 
        
     </style>
@@ -117,7 +176,7 @@
 <body>
     <div class="container">
         <div class="textBox">
-            <div>HOME/FURNITURE/BEDROOM</div>
+            <div style="font-weight: bolder;">HOME/FURNITURE/BEDROOM</div>
             <!-- <h4>-CATEGORY</h4> -->
             <hr style="width: 25%; text-align: left; margin-left: 0;"/>
             <!-- <div >
@@ -150,8 +209,8 @@
         </div>
         <div class="productbox">
             <div class="whitestrip">
-                <span>Showing 1 Results</span><span style="margin-left: 28%;">View by</span> 
-                <span style="margin-left: 6%;"> sort by:
+                <span style="color: violet;font-size: 27px;">Showing 1 Results</span>
+                <span style="margin-left: 31%;"> sort by:
                     <select id="sortingBox">
                         <option value="">Select</option>
                         <option value="high">High to low</option>

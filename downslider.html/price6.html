@@ -111,6 +111,56 @@
       a{
           text-decoration: none;
       }
+      body{
+            animation: slider 13s ease-in-out infinite;
+            background-size: cover;
+        }
+        @keyframes slider{
+          0%{ background-image: url("https://image.freepik.com/free-photo/orange-pink-watercolor-abstract-background_3590-204.jpg");}
+          10%{ background-image: url("https://image.freepik.com/free-photo/orange-pink-watercolor-abstract-background_3590-204.jpg");}
+
+          20%{background-image: url("https://img.freepik.com/free-photo/bright-green-watercolor-abstract-background_3590-278.jpg?size=338&ext=jpg");}
+          30%{background-image: url("https://img.freepik.com/free-photo/bright-green-watercolor-abstract-background_3590-278.jpg?size=338&ext=jpg");}
+
+          40%{background-image: url("https://img.freepik.com/free-vector/abstract-background-with-watercolor-shapes-empty-space_23-2149119883.jpg?size=338&ext=jpg");}
+          50%{background-image: url("https://img.freepik.com/free-vector/abstract-background-with-watercolor-shapes-empty-space_23-2149119883.jpg?size=338&ext=jpg");}
+
+
+          60%{background-image: url("https://img.freepik.com/free-vector/watercolor-painted-abstract-background_23-2149111769.jpg?size=338&ext=jpg");}
+          70%{background-image: url("https://img.freepik.com/free-vector/watercolor-painted-abstract-background_23-2149111769.jpg?size=338&ext=jpg");}
+
+          80%{background-image: url("https://as1.ftcdn.net/v2/jpg/02/51/94/20/500_F_251942017_I826iXsunIUs1pYBrOtv9Q53NX3rK3lT.jpg");}
+          90%{background-image: url("https://as1.ftcdn.net/v2/jpg/02/51/94/20/500_F_251942017_I826iXsunIUs1pYBrOtv9Q53NX3rK3lT.jpg");}
+
+          100%{background-image: url("https://img.freepik.com/free-photo/grey-watercolor-soft-abstract-background_3590-96.jpg?size=338&ext=jpg");}
+          0%{background-image: url("https://img.freepik.com/free-photo/grey-watercolor-soft-abstract-background_3590-96.jpg?size=338&ext=jpg");}
+
+        }
+        img {
+        width: 100%;
+        height: 200px;
+        display: block;
+        opacity: 1;
+        transition: 0.1s ease;
+        backface-visibility: hidden;
+        /* transition: transform 0.8s ease; */
+
+        /* border: 1px solid red; */
+      }
+
+      #product_container > div {
+        /* height: 300px; */
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      /* [2] Transition property for smooth transformation of images */
+
+      /* [3] Finally, transforming the image when container gets hovered */
+      #product_container > div:hover img {
+        transform: scale(1.1);
+        height: 76%;
+      }
     </style>
 </head>
 <body>
@@ -142,7 +192,7 @@
         <div class="productbox">
             <div class="whitestrip">
                 <span>Showing 1 Results</span><span style="margin-left: 25%;">View by</span> 
-                <span style="margin-left: 8%;"> sort by:
+                <span style="margin-left: 38%;"> sort by:
                     <select id="sortingBox">
                         <option value="">Select</option>
                         <option value="high">High to low</option>

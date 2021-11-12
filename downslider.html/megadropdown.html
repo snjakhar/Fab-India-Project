@@ -14,11 +14,13 @@
   font-family: 'Poppins', sans-serif;
 }
 nav{
-  position: fixed;
-  z-index: 99;
-  width: 100%;
   
-  background: #242526;
+  /* z-index: 99; */
+  width: 100%;
+  position: static;
+  background: white;
+  margin-top: 3px;
+  border-bottom:1px solid grey;
 }
 nav .wrapper{
   position: relative;
@@ -32,7 +34,8 @@ nav .wrapper{
   justify-content: space-between;
 }
 .wrapper .logo a{
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
+  color: grey;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -44,16 +47,17 @@ nav .wrapper{
   list-style: none;
 }
 .nav-links li a{
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
+  color: grey;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 10px;
   font-weight: 500;
   padding: 9px 15px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 .nav-links li a:hover{
-  background: #3A3B3C;
+  background: pink;
 }
 .nav-links .mobile-item{
   display: none;
@@ -68,7 +72,7 @@ nav .wrapper{
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
-.nav-links li:hover .drop-menu,
+/* .nav-links li:hover .drop-menu, */
 .nav-links li:hover .mega-box{
   transition: all 0.3s ease;
   top: 70px;
@@ -92,7 +96,8 @@ nav .wrapper{
   visibility: hidden;
 }
 .mega-box .content{
-  background: #242526;
+  /* background: #242526; */
+  background: teal;
   padding: 25px 20px;
   display: flex;
   width: 100%;
@@ -104,15 +109,33 @@ nav .wrapper{
   line-height: 45px;
 }
 .content .row img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width:380px;
+  height: 100px;
+  /* object-fit: cover; */
 }
 .content .row header{
-  color: #f2f2f2;
+  color: #f2f2f2; 
+   color: #3A3B3C;
   font-size: 20px;
   font-weight: 500;
 }
+
+.content .row a{
+  /* color: #f2f2f2; 
+   color: #3A3B3C; */
+   color: violet;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row a:hover{
+  /* color: #f2f2f2; 
+   color: #3A3B3C; */
+   color: blue;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
 .content .row .mega-links{
   margin-left: -40px;
   border-left: 1px solid rgba(255,255,255,0.09);
@@ -154,6 +177,8 @@ nav .wrapper{
     top: 0;
     left: -100%;
     background: #242526;
+    
+    
     display: block;
     padding: 50px 10px;
     line-height: 50px;
@@ -167,6 +192,7 @@ nav .wrapper{
   }
   ::-webkit-scrollbar-track {
     background: #242526;
+    
   }
   ::-webkit-scrollbar-thumb {
     background: #3A3B3C;
@@ -230,12 +256,13 @@ nav .wrapper{
   .mega-box{
     position: static;
     top: 65px;
-    opacity: 1;
+    opacity:1;
     visibility: visible;
     padding: 0 20px;
     max-height: 0px;
     overflow: hidden;
     transition: all 0.3s ease;
+    background-color:white;
   }
   .mega-box .content{
     box-shadow: none;
@@ -244,6 +271,7 @@ nav .wrapper{
   }
   .mega-box .content .row{
     width: 100%;
+    
     margin-bottom: 15px;
     border-top: 1px solid rgba(255,255,255,0.08);
   }
@@ -260,7 +288,12 @@ nav .wrapper{
   }
   .content .row header{
     font-size: 19px;
+    
   }
+  
+
+ 
+  
 }
 nav input{
   display: none;
@@ -268,40 +301,164 @@ nav input{
 
 .body-text{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 40%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  padding: 0 30px;
+  /* padding: 0 30px; */
 }
 .body-text div{
   font-size: 45px;
   font-weight: 600;
 }
 
+.top{
+  border: 1px solid red;
+  z-index: 2000;
+  position: fixed;
+  width: 100%;
+  
+}
+.top2{
+  width: 100%;
+  height: 30px;
+  background-color: maroon;
+  text-align: center;
+  color: white;
+}
+.top3{
+  border: 1px solid black;
+  width: 100%;
+  height: 100px;
+}
+.top3>div{
+  width: 33%;
+  justify-content: space-evenly;
+  border: 1px solid green;
+  height: 100px;
+}
+
+.top3>div{
+  vertical-align: top;
+  display: inline-flex;
+
+}
+.top3>.searchbox{
+  width: 25%;
+  
+}
+.top3>.searchbox>input{
+  height: 30px;
+  margin-top: 30px;
+  width: 290px;
+  background-color: white;
+  color: black;
+  margin-left: 30px;
+  border: 0.2px solid black ;
+  text-align: center;
+  
+}
+.top3>.searchbox>span{
+  width: 40px;
+  height: 30px;
+  border: 0.2px solid black;
+  background-color: white;
+  margin-right: 50px;
+  
+}
+
+.top3>.phototags{
+  width: 41%;
+  
+ 
+}
+
+.phototags>.phototag1{
+  width: 100%;
+  height:22%;
+  border: 1px solid maroon;
+  display: inline;
+  text-align: center;
+  margin-top: 15px;
+  
+  
+  
+}
+.phototags>.phototag1>a{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+ 
+}
+.phototags>.phototag1>a:hover{
+  color: blue;
+ 
+}
+.phototag2{
+  width: 100px;
+  border: 1px solid green;
+  height: 70px;
+}
+
+
     </style>
 </head>
 <body>
+  <div class="top1">
+    <div class="top2">Call 1800 100 1212 and shop in comfort at home</div>
+    <div class="top3">
+      <div class="img" >
+        
+        <img 
+        width="100px"
+        height="40px"
+        style="margin-right: 150px;margin-top: 25px;"
+        src="https://www.fabindia.com/file/general/fab_india_logo.png" alt="">
+      </div>
+      <div class="searchbox">
+        <input type="text" placeholder="Enter your searxh text "/><span style="margin-left: 0px;margin-top: 30px;">
+          <img src="https://www.fabindia.com/file/general/magnifying-glass_n.svg" alt="">
+        </span>
+      </div>
+      <div class="phototags">
+        <div class="phototag1">
+          <a href="" >Signin</a>  |
+          <a href="">Signup</a>  |
+          <a href=""><span style="font-weight: bolder;">Fab</span>Family</a>   |
+          <a href="">Track your order</a>    |
+          <a href="">Store locator</a>    |
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
   <nav>
+    
     <div class="wrapper">
-      <div class="logo"><a href="#">FAB INDIA</a></div>
+      <!-- <div class="logo"><a href="#">FAB INDIA</a></div> -->
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#">new arrivals</a></li>
+        <li><a href="#">collection</a></li>
+        <li><a href="#">women</a></li>
+        <li><a href="#">mens</a></li>
+        <li><a href="#">kids</a></li>
+        <li><a href="#">home linen</a></li>
+        <li><a href="#">Dining and Decor</a></li>
         <li>
           <a href="#" class="desktop-item">FAISHON</a>
           <input type="checkbox" id="showDrop">
-          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <!-- <label for="showDrop" class="mobile-item">Dropdown Menu</label>
           <ul class="drop-menu">
             <li><a href="#">SHIRT</a></li>
             <li><a href="#">TEE</a></li>
             <li><a href="#">SHOES</a></li>
             <li><a href="#">JEANS</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li>
           <a href="#" class="desktop-item">FURNITURE</a>
@@ -311,11 +468,12 @@ nav input{
             <div class="content">
               <div class="row">
                 <img 
-                width="10px"
+                width="100px"
                 src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="">
               </div>
               <div class="row">
-                <header>BEDROOM</header>
+                <!-- <header>BEDROOM</header> -->
+                <a href="">Bedroom</a>
                 <ul class="mega-links">
                   <li><a href="#">BED</a></li>
                   <li><a href="#">TABLE</a></li>
@@ -324,15 +482,16 @@ nav input{
                 </ul>
               </div>
               <div class="row">
-                <header>Studyroom</header>
+                <!-- <header>Study Room</header> -->
+                <a href="">Study room</a>
                 <ul class="mega-links">
                   <li><a href="#">TABLE</a></li>
                   <li><a href="#">CHAIR</a></li>
-                  <li><a href="#">BOOK STAND</a></li>
-                  <li><a href="#">BAG-STAND</a></li>
+                  <li><a href="#">RESKS</a></li>
+                  <!-- <li><a href="#">BAG-STAND</a></li> -->
                 </ul>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <header>Dinning room</header>
                 <ul class="mega-links">
                   <li><a href="#">TABLE</a></li>
@@ -340,20 +499,29 @@ nav input{
                   <li><a href="#">PLATE STAND</a></li>
                   <li><a href="#">UTENSIL WARDOBE</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </li>
-        <li><a href="#">Feedback</a></li>
+        <li><a href="#">beauty</a></li>
+        <li><a href="#">Food</a></li>
+         <li><a href="#">Custom Kurta</a></li>
+        <li><a href="#" style="color: red;">Sale</a></li>
       </ul>
       <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
   </nav>
+  
 
+  </div>
+ 
   <div class="body-text">
     <div class="title">WELCOME TO FABINNDIA PAGE</div>
     <div class="sub-title">HOPE YOU WILL LIKE IT</div>
-  </div>
+    
+  </div> 
+</div> 
+  
 
 </body>
 </html>
