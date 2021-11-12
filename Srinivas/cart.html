@@ -32,6 +32,7 @@
         flex-grow: 1.5;
         /* border: 3px solid yellow; */
         position: relative;
+        line-height: 30px;
       }
 
       .shoppinggrid {
@@ -72,7 +73,8 @@
       .qnty {
         margin-left: 120px;
       }
-      .apply,.proceed{
+      .apply,
+      .proceed {
         background-color: gold;
         width: 220px;
         height: 27px;
@@ -95,12 +97,13 @@
         <span id="subtotal"></span>
         <hr style="width: 90%; text-align: left; margin-left: 0" />
 
-       <button class="proceed" onclick="signup()">Proceed to Checkout</button>
+        <button class="proceed" onclick="signup()">Proceed to Checkout</button>
         <hr style="width: 90%; text-align: left; margin-left: 0" />
-        <div>Coupon Code</div>
-        <input id="code" type="text" /><br />
-        <span id="cerror"></span>
-        <br />
+        <div >Coupon Code</div>
+
+        <input  id="code" type="text" /><br />
+        <div id="cerror"></div>
+       
         <button class="apply">Apply</button>
       </div>
     </div>
@@ -209,26 +212,25 @@
     var sub = document.getElementById("subtotal").textContent;
 
     localStorage.setItem("total_payment", sub);
-    window.location.href = "file:///D:/masai_school/Git%20Desktop/Fab-India-Project/sarfaraz/signup.html";
+    window.location.href = "\sarfaraz\Signup.html";
   }
   var valid = 1;
   document.querySelector(".apply").addEventListener("click", function () {
     var sub = +document.getElementById("subtotal").textContent;
     var code = document.getElementById("code").value;
-    if (code == "fab30" && valid == 1) 
-    {
-      valid=2;
+    if (code == "fab30" && valid == 1) {
+      valid = 2;
       document.getElementById("subtotal").textContent = (sub * 70) / 100;
-      document.getElementById("cerror").textContent="Coupon Applied ☺"
+      document.getElementById("cerror").textContent = "Coupon Applied 😉";
+      document.getElementById("cerror").style = "color:green";
       return;
-    } 
-    else if(valid==2){
-     document.getElementById("cerror").textContent="Coupon Applied 😉"
-     document.getElementById("cerror").style="color:green"
-    }
-    else {
-      document.getElementById("cerror").textContent="Invalid Code😑"
-      document.getElementById("cerror").style="color:red"
+    } else if (valid == 2) {
+      document.getElementById("cerror").textContent =
+        "Coupon Applied Already 😉";
+      document.getElementById("cerror").style = "color:green";
+    } else {
+      document.getElementById("cerror").textContent = "Invalid Code😑";
+      document.getElementById("cerror").style = "color:red";
     }
   });
 </script>
