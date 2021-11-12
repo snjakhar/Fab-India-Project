@@ -27,12 +27,14 @@ h3 {
 h5 {
   text-align: center;
   color: lightslategray;
-  line-height: 13px;
+  line-height: 18px;
 }
 p {
   color: lightslategray;
   font-family: "Gill Sans Extrabold", sans-serif;
   text-align: center;
+  line-height: 18px;
+
 }
 .midimg {
   width: 100%;
