@@ -534,6 +534,7 @@ function display(array) {
     h4.innerHTML = "M.R.P. ₹ " + item.mrp;
     div.append(h4);
   });
+  
 }
 
 var sorting = document.getElementById("sortingBox");
