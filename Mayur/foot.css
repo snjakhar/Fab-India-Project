@@ -1,0 +1,81 @@
+#footcont{
+    border: 1px solid transparent;
+    width: 98%;
+    height:350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family:sans-serif;
+    background-color: lightgray;
+}
+#footcont>div{
+    width: 20%;
+    height: 70%;
+    border: 1px solid transparent;
+}
+.listfoot{
+    padding: 1px;
+}
+.h3{
+    margin-left: 15px;
+    font-size: 20px;
+
+    
+
+}
+
+li{
+   
+    list-style: none;
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 25px;
+    color: black;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+}
+.soc{
+    display: grid;
+    justify-content: left;
+    padding: 20px;
+    height: 70%;
+
+
+}
+.socdiv{
+    width: 100%;
+    height: 25px;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+.socdiv>div{
+    width: 25px;
+    height: 100%;
+    border: 1px solid transparent;
+    margin-left: 10px;
+}
+
+.logimg{
+    width: 100%;
+    height: 100%;
+}
+.appstore{
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+}
+
+.h6{
+    text-align: justify;
+    word-wrap: normal;
+    font-size: 8px;
+    margin-top: 45px;
+}
+
+
+
