@@ -1,0 +1,73 @@
+#cont {
+  border: 1px solid transparent;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin: auto;
+
+  background-color: white;
+  z-index: 2;
+}
+
+.profile {
+  border: 1px solid transparent;
+  width: 98%;
+  height: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.profile > div {
+  width: 31%;
+  border: 1px solid transparent;
+}
+.symbol {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+}
+.symbol > div {
+  width: 40px;
+  height: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+}
+.symbimg {
+  width: 100%;
+  height: 70%;
+  justify-items: center;
+}
+select {
+  border: 0;
+  height: 80%;
+  width: 20px;
+}
+.logo > div {
+  width: 40%;
+  border: 1px solid transparent;
+  margin: auto;
+  height: 100%;
+}
+.logoimg {
+  width: 100%;
+  height: 90%;
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  font-family: "Lucida Sans";
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: darkslategray;
+  font-weight: bold;
+}
