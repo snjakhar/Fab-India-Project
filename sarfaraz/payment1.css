@@ -203,10 +203,11 @@ select {
 .modalBox {
   background-image: url(https://mediacloud.theweek.com/image/private/s--yHGeAyrs--/v1608528305/istock-527028804.jpg);
   background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 520px 300px;
+ 
   width: 40vw;
   height: 40vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-color: rgb(218, 207, 113);
   z-index: 3;
   /* left: 20%; */
