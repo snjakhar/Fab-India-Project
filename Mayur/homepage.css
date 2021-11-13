@@ -92,7 +92,7 @@ select {
 }
 /* ------------shopping div------------- */
 
-#seconddiv {
+/* #seconddiv {
   border: 1px solid transparent;
   display: flex;
   width: 100%;
@@ -101,7 +101,7 @@ select {
   text-align: center;
   position: relative;
 }
-ul {
+/* ul {
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -109,8 +109,8 @@ ul {
   font-size: 13px;
   list-style-type: none;
   font-weight: bold;
-  margin-left: 10%;
-}
+  margin-left: 2%;
+} */
 a {
   text-decoration-line: none;
   color: darkslategray;
@@ -120,7 +120,7 @@ a {
 .slideshow-container {
   position: relative;
   margin: auto;
-}
+} */
 
 /* Hide the images by default */
 .mySlides {
