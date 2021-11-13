@@ -1,6 +1,6 @@
-body{
- margin:0px;
- padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 #container {
   display: flex;
@@ -38,7 +38,6 @@ p {
   font-family: "Gill Sans Extrabold", sans-serif;
   text-align: center;
   line-height: 18px;
-
 }
 .midimg {
   width: 100%;
@@ -115,12 +114,13 @@ a {
   text-decoration-line: none;
   color: darkslategray;
 }
+*/
 
 /* Slideshow container */
 .slideshow-container {
   position: relative;
   margin: auto;
-} */
+}
 
 /* Hide the images by default */
 .mySlides {
