@@ -26,7 +26,7 @@
 
 First you have to Visit on the `Home Page`. There you have to click on `Furniture` 
 After that furniute page will open where you can click on `First Slideshow Images`.
-Then you will find bedromm section with different Products.
+Then you will find bedroom section with different Products.
 Now you can click on `Any Furniture Item` and add to cart using `Add to cart button`.
 After that you can also add `coupon code` correct coupon code is `fab30`
 Then fill address detail and move forward to payment page.
